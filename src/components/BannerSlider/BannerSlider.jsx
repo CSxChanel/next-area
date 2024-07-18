@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../styles/slider.css"; // Sesuaikan path sesuai dengan struktur proyek Anda
+// Sesuaikan path sesuai dengan struktur proyek Anda
 
 // Import gambar
 import Baner1 from "/public/assets/baner/14-IndihomeTV-720x400px_M.png";

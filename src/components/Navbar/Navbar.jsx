@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { AiOutlineMenuUnfold, AiOutlineVerticalLeft } from "react-icons/ai";
 
-import "./Navbar.css";
 import { NavLinks } from "../../services/Nav-Link.js";
 import Logo from "/public/Logo_indiHome.png";
 
