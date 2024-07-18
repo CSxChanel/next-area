@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 import { useRouter } from "next/router";
 import { AiOutlineMenuUnfold, AiOutlineVerticalLeft } from "react-icons/ai";
 
@@ -18,14 +20,13 @@ const Navbar = () => {
       <>
         {NavLinks.map((link) => (
           <div key={link.id} className="">
-            <Link href={link.path}>
-              <a
-                className={`px-3 py-1 hover:border hover:text-slate-100 hover:bg-rose-600 hover:rounded-full
+            <Link
+              href={link.path}
+              className={`px-3 py-1 hover:border hover:text-slate-100 hover:bg-rose-600 hover:rounded-full
                                 ${router.pathname === link.path ? "active" : ""}
                             `}
-              >
-                {link.text}
-              </a>
+            >
+              {link.text}
             </Link>
           </div>
         ))}
@@ -37,13 +38,11 @@ const Navbar = () => {
     <div>
       <div className="navbar fixed top-0 left-0 w-full p-4 flex justify-between items-center z-50 bg-slate-50 border-b-2 border-b-rose-400">
         <Link href="/">
-          <a>
-            <Image
-              src={Logo}
-              alt="Logo_indihome"
-              className="h-[50px] w-[170px]"
-            />
-          </a>
+          <Image
+            src={Logo}
+            alt="Logo_indihome"
+            className="h-[50px] w-[170px]"
+          />
         </Link>
         <div>
           <div className="nav font-semibold lg:flex lg:flex-1 lg:gap-x-5 lg:items-center hidden">
