@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // Sesuaikan path sesuai dengan struktur proyek Anda
-
+import Image from "next/image";
 // Import gambar
 import Baner1 from "../../../public/assets/baner/14-IndihomeTV-720x400px_M.png";
 import Baner2 from "../../../public/assets/baner/720-x-400px0_M.jpg";
@@ -58,7 +58,11 @@ const BannerSlider = () => {
       <Slider {...settings}>
         {banners.map((banner, index) => (
           <div key={index}>
-            <img src={banner} alt={`Banner ${index + 1}`} className="w-full" />
+            <Image
+              src={banner}
+              alt={`Banner ${index + 1}`}
+              className="w-full"
+            />
           </div>
         ))}
       </Slider>
