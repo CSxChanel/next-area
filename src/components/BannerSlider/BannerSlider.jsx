@@ -62,6 +62,8 @@ const BannerSlider = () => {
               src={banner}
               alt={`Banner ${index + 1}`}
               className="w-full"
+              style={{ objectFit: "cover" }}
+              priority={index === 0}
             />
           </div>
         ))}
