@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     <div>
       <Navbar />
       <BannerSlider />
-      {children}
+      <div className="mt-10 sm:mt-16">{children}</div>
     </div>
   );
 };

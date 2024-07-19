@@ -7,7 +7,7 @@ import PagePromo from "./promo-indihome";
 
 export default function Home() {
   return (
-    <div className="mt-10">
+    <div>
       <Banner />
       <PagePromo />
       <InternetJitu />
