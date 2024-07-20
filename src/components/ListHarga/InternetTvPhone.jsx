@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { PulseLoader } from "react-spinners";
 import BoxList from "./BoxList.jsx";
-import { InternetTvPhone } from "../../services/Datas.js";
+import { InternetTvPhone } from "@/services/Datas.js";
 
 const InetTvPhone = () => {
     const inetTvPhone = [...InternetTvPhone];

@@ -5,8 +5,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { AiOutlineMenuUnfold, AiOutlineVerticalLeft } from "react-icons/ai";
 
-import { NavLinks } from "../../services/Nav-Link.js";
-import Logo from "/public/Logo_indiHome.png";
+import { NavLinks } from "@/services/Nav-Link.js";
+import Logo from "@/public/Logo_indiHome.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,18 +1,20 @@
 import React from "react";
-import Banner from "../components/Banner";
-import InternetJitu from "../components/ListHarga/InternetOnly";
-import JituTv from "../components/ListHarga/InternetTv";
-import InetTvPhone from "../components/ListHarga/InternetTvPhone";
-import PagePromo from "./promo-indihome";
+import Banner from "@/components/Banner";
+import InternetJitu from "@/components/ListHarga/InternetOnly";
+import InetTvPhone from "@/components/ListHarga/InternetTvPhone";
+import MapImage from "@/components/MapsImg/MapImage";
+import InternetPromo from "@/components/ListHarga/InternetPromo";
+import InternetTv from "@/components/ListHarga/InternetTv";
 
 export default function Home() {
   return (
     <div>
       <Banner />
-      <PagePromo />
+      <InternetPromo />
       <InternetJitu />
-      <JituTv />
+      <InternetTv />
       <InetTvPhone />
+      <MapImage />
     </div>
   );
 }

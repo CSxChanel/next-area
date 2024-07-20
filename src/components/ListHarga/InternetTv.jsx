@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { PulseLoader } from "react-spinners";
 //BoxList.jsx
 import BoxList from "./BoxList.jsx";
-import { InternetTv } from "../../services/Datas.js";
+import { InternetTv } from "@/services/Datas.js";
 
 const JituTv = () => {
     const internetTv = [...InternetTv];

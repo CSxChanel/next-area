@@ -1,7 +1,7 @@
 //src/components/ListHarga/InternetOnly
 import React, { useState, useEffect } from "react";
 import BoxList from "./BoxList.jsx";
-import { InternetOnly } from "../../services/Datas.js";
+import { InternetOnly } from "@/services/Datas.js";
 import { PulseLoader } from "react-spinners";
 
 const InternetJitu = () => {
