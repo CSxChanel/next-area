@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
       <>
         {NavLinks.map((link) => (
-          <div key={link.id} className="">
+          <div key={link.id} className="navbar">
             <Link
               href={link.path}
               className={`px-3 py-1 hover:border hover:text-slate-100 hover:bg-rose-600 hover:rounded-full

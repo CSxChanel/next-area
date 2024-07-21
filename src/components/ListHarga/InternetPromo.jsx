@@ -17,7 +17,7 @@ const InternetPromo = () => {
 
   return (
     <div className="container my-5">
-      <div className="mt-16 w-full mx-auto text-center">
+      <div className="mt-10 w-full mx-auto text-center">
         {loading ? (
           <div className="flex justify-center items-center h-10">
             <PulseLoader color="#e11d48" size={15} />

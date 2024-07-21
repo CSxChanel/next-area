@@ -8,21 +8,33 @@ export const AreaCoverage = [
   { id: 7, path: "legok", area: "LEGOK" },
   { id: 8, path: "rajeg", area: "RAJEG" },
 ];
-
-import Baner1 from "../../public/assets/baner/14-IndihomeTV-720x400px_M.png";
-import Baner2 from "../../public/assets/baner/720-x-400px0_M.jpg";
-import Baner3 from "../../public/assets/baner/Banner_Homepage_Mobile_720x400_M.jpg";
-import Baner4 from "../../public/assets/baner/banner_Lapor_Gangguan_720x400_M.jpg";
-import Baner5 from "../../public/assets/baner/banner_selfcare_720x400_M.jpg";
-import Baner6 from "../../public/assets/baner/banner_tsel_m_M.jpg";
-import Baner7 from "../../public/assets/baner/gamer720-x-400_1_M.jpg";
-import Baner8 from "../../public/assets/baner/Indihome_PL_Homepage_Mobile_720x400_M.jpg";
-import Baner9 from "../../public/assets/baner/Mobile_Homepage_720x400-_MAY_M.jpg";
-import Baner10 from "../../public/assets/baner/Mobile-(720x400)-NETFLIX-2024-(rev5)_M.jpg";
-import Baner11 from "../../public/assets/baner/Movie_LPC_HomepageMobile720x400_M.jpg";
-import Baner12 from "../../public/assets/baner/Paket-IndiHome-Netflix-720-x-400_M.jpg";
-import Baner13 from "../../public/assets/baner/Pay_in_Advance_New_720x400_M.png";
-import Baner14 from "../../public/assets/baner/Tsel-One-Paket-Dynamic-Feb-240201-Banner-Indihome-720x400_M.jpg";
+//data wilayah
+export const Area = [
+  {
+    id: 101,
+    path: "indihome-cikupa",
+    title: "IndiHome-Cikupa",
+    des: "Registrasi IndiHome cikupa kini hadir dengan pendaftaran system Online, karena untuk memudahkan anda yang memerlukan jaringan internet di kantor, rumah juga tempat usaha. dengan hanya menggunakan gadget anda bisa menghubungi marketing resmi indihome. jadi tunggu apa lagi, daftar indihome sekarang juga.",
+  },
+  {
+    id: 102,
+    path: "indihome-balaraja",
+    title: "IndiHome-Balaraja",
+    des: "Registrasi IndiHome Balaraja Bisa langsung Melalui marketing resmi indihome. indihome Balaraja memberikan paket promo hanya di wilayah indihome Balaraja yang tidak semua wilayah tersedia paket promo Paling Murah.",
+  },
+  {
+    id: 103,
+    path: "indihome-tigaraksa",
+    title: "IndiHome-Tigaraksa",
+    des: "Untuk Sobat indihome wilayah Indihome-tigaraksa dapat Registrasi atau Pendaftaran Online juga bisa menghubungi Marketing resmi indihome. ada banyak pilihat paket promo untuk wilayah tigaraksa.",
+  },
+  {
+    id: 104,
+    path: "indihome-banten",
+    title: "IndiHome-Banten",
+    des: "Untuk Sobat indihome wilayah Banten dapat melakukan Registrasi atau Pendaftaran Online, juga bisa menghubungi Marketing resmi indihome. ada banyak pilihat paket promo untuk wilayah IndiHome-Banten.",
+  },
+];
 
 //HARGA PROMO
 export const HargaPromo = [
