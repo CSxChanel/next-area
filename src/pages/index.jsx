@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Indihome-Area || Pendaftaran</title>
+        <title>Indihome-Area | Biaya Pemasangan gratis</title>
         <meta
           name="description"
           content="Pendaftaran indihome mencakup semua area."
