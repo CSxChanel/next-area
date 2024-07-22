@@ -5,8 +5,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { AiOutlineMenuUnfold, AiOutlineVerticalLeft } from "react-icons/ai";
 
-import { NavLinks } from "@/services/Nav-Link.js";
-import Logo from "@/public/Logo_indiHome.png";
+import { NavLinks } from "../../services/Nav-Link.js";
+import Logo from "/public/Logo_indiHome.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
       <>
         {NavLinks.map((link) => (
-          <div key={link.id} className="navbar">
+          <div key={link.id} className="">
             <Link
               href={link.path}
               className={`px-3 py-1 hover:border hover:text-slate-100 hover:bg-rose-600 hover:rounded-full

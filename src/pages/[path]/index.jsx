@@ -32,7 +32,7 @@ export default function AreaPage({ area }) {
   return (
     <div>
       <Head>
-        <title>{area.title} || IndiHome-Area</title>
+        <title>{area.title} || 0812-10489840</title>
         <meta name="description" content={area.des} />
         <link rel="canonical" href={pageUrl} />
 
@@ -84,9 +84,11 @@ export default function AreaPage({ area }) {
                   Promo Paket {area.title}
                 </h1>
                 <p className="font-semibold text-wrap mt-4">
-                  Paket Paling Murah hanya berlaku untuk Wilayah {area.title}.
-                  Pendaftaran bisa menghubungi Marketing resmi indihome. chat
-                  via WhatsApp pilih paket paling murah Berlangganan sekarang!
+                  Paket paling murah ini hanya berlaku untuk wilayah{" "}
+                  {area.title}. Untuk melakukan pendaftaran, Anda dapat
+                  menghubungi marketing resmi {area.path}. Chat via WhatsApp
+                  untuk memilih paket paling murah dan segera berlangganan
+                  sekarang!
                 </p>
                 <div className="border-t-2 border-slate-300 my-8">
                   <h1 className="font-bold text-2xl sm:text-3xl sm:mt-5 mt-3 text-rose-600">
