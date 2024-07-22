@@ -5,6 +5,7 @@ import BannerSlider from "./BannerSlider/BannerSlider";
 import { Area } from "@/services/Datas";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -40,6 +41,7 @@ const Layout = ({ children }) => {
       <Navbar />
       <BannerSlider />
       <main className="my-10">{children}</main>
+      <Footer/>
     </div>
   );
 };

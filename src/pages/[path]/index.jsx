@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import BoxPromo from "@/components/ListHarga/BoxPromo.jsx";
 import { HargaPromo } from "@/services/Datas.js";
 import { PulseLoader } from "react-spinners";
+import Link from "next/link";
 
 export default function AreaPage({ area }) {
   const router = useRouter();
@@ -117,6 +118,9 @@ export default function AreaPage({ area }) {
           )}
         </div>
       </main>
+      <div className="w-full mx-auto text-center my-12">
+        <Link className="py-2 px-5 sm:px-10 cursor-pointer shadow-md font-semibold border border-rose-500 hover:border-rose-700 rounded-full text-rose-500 hover:text-rose-700" href="/produk-indihome">Lihat Semua Harga</Link>
+      </div>
       <MapImage />
       <BannerImgSlider />
     </div>

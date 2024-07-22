@@ -26,6 +26,7 @@ const SemuaHarga = () => {
           <h1 className="font-bold mt-3 sm:mt-5 sm:text-3xl text-2xl text-rose-600">
             indiHome-Area
           </h1>
+          <p className="text-md sm:text-xl font-semibold p-3 sm:px-8">IndiHome menghadirkan berbagai paket promo menarik untuk memenuhi kebutuhan internet Anda. Paket-paket ini dirancang untuk memberikan pengalaman internet yang cepat, stabil, dan terjangkau. Namun, perlu diingat bahwa tidak semua paket promo tersedia di setiap wilayah. Oleh karena itu, penting untuk memeriksa ketersediaan paket di daerah Anda.</p>
         </div>
       </div>
       {loading ? (
