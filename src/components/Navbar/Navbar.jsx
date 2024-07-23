@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { AiOutlineMenuUnfold, AiOutlineVerticalLeft } from "react-icons/ai";
 
-import { NavLinks } from "../../services/Nav-Link.js";
+import { NavLinks } from "@/services/Nav-Link";
 import Logo from "/public/Logo_indiHome.png";
 
 const Navbar = () => {
@@ -17,25 +17,31 @@ const Navbar = () => {
   const Nav = () => {
     const router = useRouter();
     return (
-      <>
-        {NavLinks.map((link) => (
-          <div key={link.id} className="">
-            <Link
-              href={link.path}
-              className={`px-3 py-1 hover:border hover:text-slate-100 hover:bg-rose-600 hover:rounded-full
-                                ${router.pathname === link.path ? "active" : ""}
-                            `}
-            >
-              {link.text}
-            </Link>
-          </div>
-        ))}
-      </>
+        <>
+            {NavLinks.map(link => (
+                <div key={link.id}>
+                    <Link
+                        href={link.path}
+                        target={link.target}
+                        className={`px-3 py-1 hover:border hover:text-slate-100 hover:bg-rose-600 hover:rounded-full
+                            ${router.pathname === link.path ? "active" : ""}
+                        `}
+                    >
+                        {link.text}
+                    </Link>
+                </div>
+            ))}
+        </>
     );
   };
+
+
   const whatsappMessage = encodeURIComponent(
     'Halo, saya tertarik dengan paket IndiHome.'
   );
+
+
+
   return (
     <div>
       <div className="navbar fixed top-0 left-0 w-full p-4 flex justify-between items-center z-50 bg-slate-50 border-b-2 border-b-rose-400">
