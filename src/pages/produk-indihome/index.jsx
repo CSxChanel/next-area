@@ -4,7 +4,7 @@ const ProdukIndihome = () => {
   return (
     <>
       <div className="rounded-br-[55px] rounded-tl-[55px] w-full bg-gradient-to-r from-red-700 to-rose-500">
-        <div className="py-10 px-5 text-slate-100 sm:grid sm:grid-cols-2 sm:gap-x-12 sm:px-24 sm:items-start">
+        <div className="py-10 px-5 text-slate-100 sm:grid sm:grid-cols-2 sm:gap-x-12 sm:px-24 sm:items-center">
           <div>
             <h2 className="text-2xl font-bold mb-4">
               Selamat datang indiHome Area
@@ -17,7 +17,7 @@ const ProdukIndihome = () => {
             </p>
           </div>
           <div>
-            <h3 className="text-[27px] mt-8 leading-8 font-semibold">
+            <h3 className="text-[20px] sm:text-[25px] mt-8 leading-8 font-semibold">
               Untuk informasi lebih lanjut, hubungi Marketing resmi IndiHome.
               Nikmati kemudahan internet cepat dan stabil dengan mendaftar
               IndiHome secara online sekarang juga!

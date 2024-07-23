@@ -19,32 +19,32 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Indihome-Area | Biaya Pemasangan gratis</title>
+        <title>Indihome-Area |Provider internet Biaya Pemasangan gratis untuk semua Area</title>
         <meta
           name="description"
-          content="Pendaftaran indihome mencakup semua area."
+          content="Provider internet Pendaftaran indihome mencakup semua area. Biaya pemasangan Gratis."
         />
         <link rel="canonical" href={pageUrl} />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Indihome-Area || Pendaftaran" />
+        <meta property="og:title" content="Indihome-Area || Provider internet Pendaftaran gratis" />
         <meta
           property="og:description"
-          content="Pendaftaran indihome mencakup semua area."
+          content="Provider internet Pendaftaran indihome mencakup semua Area."
         />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:image" content={ogImage} />
 
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Indihome-Area || Pendaftaran" />
+        <meta name="twitter:title" content="Indihome-Area || Provider internet Pendaftaran Gratis" />
         <meta
           name="twitter:description"
-          content="Pendaftaran indihome mencakup semua area."
+          content="Provider internet Pendaftaran indihome mencakup semua area."
         />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="keywords" content="indihome, internet, pendaftaran" />
+        <meta name="keywords" content="indihome, internet, pendaftaran, indihome-cikupa, indihome-balaraja, indihome-tigaraksa" />
       </Head>
       <div>
         <Banner />

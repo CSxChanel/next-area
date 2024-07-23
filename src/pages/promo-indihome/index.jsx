@@ -19,7 +19,7 @@ const PromoIndihome = () => {
             </p>
           </div>
           <div>
-            <h3 className="text-[27px] mt-8 leading-8 font-semibold">
+            <h3 className="text-[20px] mt-8 leading-8 font-semibold">
               Untuk informasi lebih lanjut mengenai paket promo dan ketersediaan
               di wilayah Anda, hubungi Marketing IndiHome Pilih Produk Chat via
               WhatApp. Pastikan Anda mendapatkan informasi dari sumber resmi
