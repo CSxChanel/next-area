@@ -33,7 +33,9 @@ const Navbar = () => {
       </>
     );
   };
-
+  const whatsappMessage = encodeURIComponent(
+    'Halo, saya tertarik dengan paket IndiHome.'
+  );
   return (
     <div>
       <div className="navbar fixed top-0 left-0 w-full p-4 flex justify-between items-center z-50 bg-slate-50 border-b-2 border-b-rose-400">
@@ -63,10 +65,16 @@ const Navbar = () => {
       >
         <div className="toggleNav flex flex-col items-center my-10 gap-y-10 text-xl font-semibold font-primary">
           <Nav />
+          <a
+            href={`https://wa.me/+6281210489840?text=${whatsappMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5  border rounded-2xl bg-rose-600 text-sm text-center text-slate-50 py-2 font-bold hover:bg-rose-700 hover:text-slate-100 animate-bounce"
+          >
+            Berlangganan Sekarang
+          </a>
         </div>
-        <div className="w-[50%] mx-auto border rounded-2xl bg-rose-600 text-center text-slate-50 py-2 font-bold hover:bg-rose-700 hover:text-slate-100 animate-bounce">
-          <button>Berlangganan</button>
-        </div>
+        
       </div>
     </div>
   );

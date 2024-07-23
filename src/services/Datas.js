@@ -66,8 +66,8 @@ export const HargaPromo = [
     type: "1P ( internet )",
     title: "Paket Jitu-1",
     price: 299000,
-    benevit: "Bebas biaya pasang (Normal Rp500.000) ",
-    benevit2: "Kecepatan internet hingga 50 Mbps",
+    benevit:  "Bebas biaya pasang (Normal Rp500.000) ",
+      benevit2: "Kecepatan internet hingga 50 Mbps",
     syarat:
       "Harga belum termasuk PPN 11%. Promo Biaya Pemasangan Baru (PSB) mulai dari 90% sampai dengan bebas biaya pemasangan baru dari harga normal Rp500.000,- tergantung dengan paket yang dipilih. Untuk Paket dengan Biaya Pemasangan Baru (PSB), PSB dibayarkan setelah proses pemasangan perangkat layanan IndiHome selesai. Pelanggan tidak diperkenankan melakukan pembayaran secara tunai selain di GraPARI Telkomsel. Tagihan IndiHome akan ditagihkan kepada pelanggan tiap bulan atas dasar pasca bayar, dan akan diprorata di bulan pertama. Pelanggan dapat menikmati layanan      internet unlimited, koneksi paling stabil, jaringan terluas di Indonesia, serta jaminan pelayanan 24/7 setiap hari. Beberapa paket sudah termasuk akses Disney+ Hotstar tanpa biaya tambahan, dan dapat diunduh melalui Google Play Store dan Apple App Store.  Syarat dan ketentuan tambahan terkait Disney+ Hotstar diatur pada poin khusus di bawah .Beberapa paket sudah termasuk akses layanan     OTT IndiHome TV, Catchplay, WeTV Iflix, atau Vidio tanpa biaya tambahan. Kontrak berlangganan IndiHome berlaku selama minimal 12 (dua belas) bulan setelah layanan IndiHome berstatus aktif.   Apabila pelanggan memutuskan untuk berhenti berlangganan sebelum masa berlakukontrak berakhir, maka akan dikenakan denda sebesar Rp1.000.000.",
   },
@@ -77,8 +77,8 @@ export const HargaPromo = [
     type: "1P ( internet )",
     title: "Paket Jitu-1",
     price: 375000,
-    benevit: "Bebas biaya pasang (Normal Rp500.000) ",
-    benevit2: "Kecepatan internet hingga 100 Mbps",
+    benevit:  "Bebas biaya pasang (Normal Rp500.000) ",
+      benevit: "Kecepatan internet hingga 100 Mbps",
     syarat:
       "Harga belum termasuk PPN 11%. Promo Biaya Pemasangan Baru (PSB) mulai dari 90% sampai dengan bebas biaya pemasangan baru dari harga normal Rp500.000,- tergantung dengan paket yang        dipilih. Untuk Paket dengan Biaya Pemasangan Baru (PSB), PSB dibayarkan setelah proses pemasangan perangkat layanan IndiHome selesai. Pelanggan tidak diperkenankan melakukan pembayaran secara        tunai selain di GraPARI Telkomsel. Tagihan IndiHome akan ditagihkan kepada pelanggan tiap bulan atas dasar pasca bayar, dan akan diprorata di bulan pertama. Pelanggan dapat menikmati layanan        internet unlimited, koneksi paling stabil, jaringan terluas di Indonesia, serta jaminan pelayanan 24/7 setiap hari. Beberapa paket sudah termasuk akses Disney+ Hotstar tanpa biaya tambahan,       dan dapat diunduh melalui Google Play Store dan Apple App Store.  Syarat dan ketentuan tambahan terkait Disney+ Hotstar diatur pada poin khusus di bawah .Beberapa paket sudah termasuk akses       layanan     OTT IndiHome TV, Catchplay, WeTV Iflix, atau Vidio tanpa biaya tambahan. Kontrak berlangganan IndiHome berlaku selama minimal 12 (dua belas) bulan setelah layanan IndiHome        berstatus aktif.   Apabila pelanggan memutuskan untuk berhenti berlangganan sebelum masa berlakukontrak berakhir, maka akan dikenakan denda sebesar Rp1.000.000.",
   },

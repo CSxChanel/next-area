@@ -1,4 +1,3 @@
-//src/components/Modals/OpenBenevit
 import React, { useState, useEffect } from "react";
 import { BsCheck2Circle } from "react-icons/bs";
 
@@ -15,6 +14,9 @@ const OpenBenevit = ({ onClose, benevit }) => {
             onClose();
         }, 300); // Durasi yang sama dengan transisi
     };
+
+    // Validasi benevit agar tidak null atau undefined
+    const validBenevit = Array.isArray(benevit) ? benevit : [];
 
     return (
         <div
@@ -33,12 +35,12 @@ const OpenBenevit = ({ onClose, benevit }) => {
                 }`}
             >
                 <div className="overflow-y-scroll max-h-[50vh]">
-                    <div className="mt-4 p-4">
-                        {benevit.map((fit, index) => (
-                            <div className="flex items-center" key={index}>
-                                <BsCheck2Circle className="mr-5 text-2xl text-rose-700" />
-                                <p>{fit}</p>
-                            </div>
+                    <div className="mt-4 p-4 space-y-3">
+                        {validBenevit.map((fit, index) => (
+                            <div className="flex items-start mb-2" key={index}>
+                            <BsCheck2Circle className="mr-5 text-2xl text-rose-700" />
+                        <p className="flex-1">{fit}</p>
+                        </div>
                         ))}
                     </div>
                 </div>

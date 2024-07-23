@@ -1,9 +1,7 @@
-//src/components/Modals/OpenModal
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import OpenBenevit from "./OpenBenevit"; // Pastikan path ini sesuai
 
-
-
-const OpenModal = ({ onClose }) => {
+const OpenModal = ({ onClose, benevit }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -16,6 +14,14 @@ const OpenModal = ({ onClose }) => {
             onClose();
         }, 300); // Durasi yang sama dengan transisi
     };
+
+    const convertBenevitToArray = (benevit) => {
+        return Object.keys(benevit)
+            .filter(key => key.startsWith('benevit'))
+            .map(key => benevit[key]);
+    };
+
+    const benevitArray = convertBenevitToArray(benevit);
 
     return (
         <div
@@ -35,7 +41,7 @@ const OpenModal = ({ onClose }) => {
             >
                 <div className="overflow-y-scroll max-h-[50vh]">
                     <div className="mt-4 p-4">
-	<p>Benevit</p>
+                        <OpenBenevit onClose={handleClose} benevit={benevitArray} />
                     </div>
                 </div>
 

@@ -33,7 +33,7 @@ export default function AreaPage({ area }) {
   return (
     <div>
       <Head>
-        <title>{area.title} || 0812-10489840</title>
+        <title>{area.title} | 0812-10489840</title>
         <meta name="description" content={area.des} />
         <link rel="canonical" href={pageUrl} />
 
