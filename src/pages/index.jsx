@@ -9,13 +9,15 @@ import InternetPromo from "@/components/ListHarga/InternetPromo";
 import InternetTv from "@/components/ListHarga/InternetTv";
 import BannerImgSlider from "@/components/BannerImgSlider/BannerImgSlider";
 
+
+
 export default function Home() {
   const router = useRouter();
   const { path } = router.query;
 
   const pageUrl = `https://www.yourdomain.com/${path}`;
   const ogImage = `/images/image1.jpg`;
-
+  
   return (
     <>
       <Head>
@@ -31,7 +33,7 @@ export default function Home() {
         <meta property="og:title" content="Indihome-Area || Provider internet Pendaftaran gratis" />
         <meta
           property="og:description"
-          content="Provider internet Pendaftaran indihome mencakup semua Area."
+          content="Promo internet indihome Pendaftaran biaya Gratis,Pemasangan indihome mencakup semua Area."
         />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:image" content={ogImage} />
@@ -41,7 +43,7 @@ export default function Home() {
         <meta name="twitter:title" content="Indihome-Area || Provider internet Pendaftaran Gratis" />
         <meta
           name="twitter:description"
-          content="Provider internet Pendaftaran indihome mencakup semua area."
+          content="Promo internet indihome Pendaftaran biaya Gratis,Pemasangan indihome mencakup semua Area."
         />
         <meta name="twitter:image" content={ogImage} />
         <meta name="keywords" content="indihome, internet, pendaftaran, indihome-cikupa, indihome-balaraja, indihome-tigaraksa" />
