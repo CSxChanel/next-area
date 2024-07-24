@@ -11,7 +11,7 @@ const AnimatedMap = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           {/* Gambar peta */}
-          <image href={mapImage} width="800" height="600" />
+          <image href={mapImage} width="800" height="600" alt="indonesia"/>
 
           {/* aceh */}
           <circle

@@ -10,7 +10,7 @@ const AreaModal = ({ isOpen, onClose, area }) => {
           Close
         </button>
         <h1 className="text-2xl font-bold">{area.title}</h1>
-        <p className="mt-4">{area.des}</p>
+
       </div>
     </div>
   );

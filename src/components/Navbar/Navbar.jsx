@@ -71,14 +71,14 @@ const Navbar = () => {
       >
         <div className="toggleNav flex flex-col items-center my-10 gap-y-10 text-xl font-semibold font-primary">
           <Nav />
-          <a
+          <Link
             href={`https://wa.me/+6281210489840?text=${whatsappMessage}`}
             target="_blank"
             rel="noopener noreferrer"
             className="px-5  border rounded-2xl bg-rose-600 text-sm text-center text-slate-50 py-2 font-bold hover:bg-rose-700 hover:text-slate-100 animate-bounce"
           >
             Berlangganan Sekarang
-          </a>
+          </Link>
         </div>
         
       </div>

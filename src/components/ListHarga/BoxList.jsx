@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { GoChevronDown } from "react-icons/go";
 import OpenBenevit from "@/components/Modals/OpenBenevit.jsx";
 import OpenSyarat from "@/components/Modals/OpenSyarat.jsx";
+import Link from "next/link";
 
 const BoxList = ({
   type,
@@ -67,13 +68,13 @@ const BoxList = ({
           /bulan
         </h3>
         <div className="bg-rose-700 w-full rounded-xl shadow shadow-slate-500 text-slate-100 font-bold hover:scale-110 mt-5 py-1">
-          <a
+          <Link
             href={`https://wa.me/+6281210489840?text=${whatsappMessage}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             Berlangganan Sekarang
-          </a>
+          </Link>
         </div>
       </div>
       <div className="flex justify-between mx-3 border-t-2 my-7 py-2">
