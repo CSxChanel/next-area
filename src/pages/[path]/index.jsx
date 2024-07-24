@@ -30,10 +30,14 @@ export default function AreaPage({ area }) {
   if (!area) {
     return <div>Loading...</div>;
   }
+
+    // Cari data berdasarkan ID atau path
+    
+
   return (
     <div>
       <Head>
-        <title>{area.title} | 0812-10489840</title>
+      <title>{[area.title]}</title>
         <meta name="description" content={area.des} />
         <link rel="canonical" href={pageUrl} />
 
@@ -85,8 +89,7 @@ export default function AreaPage({ area }) {
                   Promo Paket {area.title}
                 </h1>
                 <p className="font-semibold text-wrap mt-4">
-                  Paket paling murah ini hanya berlaku untuk wilayah{" "}
-                  {area.title}. Untuk melakukan pendaftaran, Anda dapat
+                  Paket paling murah ini hanya berlaku untuk wilayah {area.title}. Untuk melakukan pendaftaran, Anda dapat
                   menghubungi marketing resmi {area.path}. Chat via WhatsApp
                   untuk memilih paket paling murah dan segera berlangganan
                   sekarang!

@@ -10,8 +10,6 @@ export const AreaCoverage = [
 ];
 //data wilayah
 export const Area = [
-  
-  
   {
     id: 101,
     path: "indihome-cikupa",
@@ -21,49 +19,49 @@ export const Area = [
 {
     id: 102,
     path: "indihome-balaraja",
-    title: "IndiHome-Balaraja",
+    title: "IndiHome-Balaraja | 0812-10489840>",
     des: "Registrasi IndiHome Balaraja Bisa langsung Melalui marketing resmi indihome. indihome Balaraja memberikan paket promo hanya di wilayah indihome Balaraja yang tidak semua wilayah tersedia paket promo Paling Murah."
 },
 {
     id: 103,
     path: "indihome-tigaraksa",
-    title: "IndiHome-Tigaraksa",
+    title: "IndiHome-Tigaraksa | 0812-10489840",
     des: "Untuk Sobat indihome wilayah Indihome-tigaraksa dapat Registrasi atau Pendaftaran Online juga bisa menghubungi Marketing resmi indihome. ada banyak pilihat paket promo untuk wilayah tigaraksa."
 },
 {
     id: 104,
     path: "indihome-rajeg",
-    title: "IndiHome-Rajeg",
+    title: "IndiHome-Rajeg | 0812-10489840",
     des: "IndiHome Rajeg hadir dengan kemudahan pendaftaran online untuk memenuhi kebutuhan internet Anda di rumah, kantor, atau tempat usaha. Tanpa perlu repot, Anda dapat langsung menghubungi marketing resmi IndiHome melalui gadget Anda. Segera daftar dan nikmati layanan internet terbaik dari IndiHome Rajeg."
 },
 {
     id: 105,
     path: "indihome-curug",
-    title: "IndiHome-Curug",
+    title: "IndiHome-Curug | 0812-10489840",
     des: "Untuk Anda yang berada di Curug, kini registrasi IndiHome semakin praktis dengan sistem online. Baik untuk kebutuhan rumah, kantor, atau usaha, Anda dapat mendaftar dengan mudah hanya dengan gadget Anda. Hubungi marketing resmi IndiHome dan segera daftar untuk menikmati internet cepat dan stabil."
 },
 {
     id: 106,
     path: "indihome-pasar-kemis",
-    title: "IndiHome-Pasarkemis",
+    title: "IndiHome-Pasarkemis | 0812-10489840",
     des: "Registrasi IndiHome Pasar Kemis kini semakin mudah dan cepat dengan sistem pendaftaran online. Hanya dengan menggunakan gadget, Anda bisa menghubungi marketing resmi IndiHome untuk pemasangan di rumah, kantor, atau tempat usaha Anda. Jangan lewatkan kesempatan ini, daftar IndiHome sekarang juga!"
 },
 {
     id: 107,
     path: "indihome-legok",
-    title: "IndiHome-Legok",
+    title: "IndiHome-Legok | 0812-10489840",
     des: "IndiHome Legok menawarkan kemudahan pendaftaran melalui sistem online, memudahkan Anda yang membutuhkan layanan internet di rumah, kantor, atau tempat usaha. Cukup gunakan gadget Anda untuk menghubungi marketing resmi IndiHome. Daftar sekarang dan nikmati layanan internet unggulan dari IndiHome Legok."
 },
 {
     id: 108,
     path: "indihome-kelapa-dua",
-    title: "IndiHome-Kelapadua",
+    title: "IndiHome-Kelapadua | 0812-10489840",
     des: "IndiHome Kelapa Dua kini menyediakan pendaftaran online yang mudah dan praktis untuk semua kebutuhan internet Anda, baik di rumah, kantor, maupun tempat usaha. Dengan gadget Anda, langsung hubungi marketing resmi IndiHome dan segera daftar untuk menikmati koneksi internet terbaik di Kelapa Dua."
 },
 {
   id: 109,
   path: "indihome-banten",
-  title: "IndiHome-Banten",
+  title: "IndiHome-Banten | 0812-10489840",
   des: "Untuk Sobat indihome wilayah Banten dapat melakukan Registrasi atau Pendaftaran Online, juga bisa menghubungi Marketing resmi indihome. ada banyak pilihat paket promo untuk wilayah IndiHome-Banten."
 }
 ];
@@ -284,7 +282,7 @@ export const InternetTv = [
     benevit2: "Kecepatan internet hingga 100 Mbps",
     benevit3: "Paket TV 28 Channel",
     syarat:
-      "Harga belum termasuk PPN 11%. Promo Biaya Pemasangan Baru (PSB) untuk kecepatan 30Mbps sebesar 90% menjadi Rp50.000,- dan untuk kecepatan 50Mbps dan 100Mbps mendapatkan promo Bebas Biaya Pemasangan Baru (PSB), dibayarkan setelah proses pemasangan perangkat layanan IndiHome selesai. Pelanggan tidak diperkenankan melakukan pembayaran secara tunai selain di GraPARI Telkomsel. Paket IndiHome (Dengan Akses Netflix) ini tersedia untuk pelanggan baru IndiHome yang ingin berlangganan mulai dari kecepatan 30 Mbps dan pelanggan lama IndiHome yang ingin melakukan upgrade ke paket ini. Masa berlangganan minimal Paket IndiHome (Dengan Akses Netflix) ini adalah 12 (dua belas) bulan. Paket 3P (Internet + TV + Telepon) dengan akses Netflix sudah termasuk paket TV Entry. Jumlah saluran dan konten TV Interaktif dapat berubah. Info channel bisa dilihat di indihome.co.id/tv/channel. Paket 2P (Internet + TV) dengan akses Netflix sudah termasuk paket TV Intro. Jumlah saluran dan konten TV Interaktif dapat berubah. Info channel bisa dilihat di indihome.co.id/tv/channel. Paket 3P (Internet + TV + Telepon) dan Paket 2P (Internet + TV) dengan akses Netflix sudah termasuk akses ke Netflix dan aplikasi IndiHome TV tanpa biaya tambahan yang dapat diunduh melalui Google Play Store dan Apple App Store. Syarat dan ketentuan tambahan terkait Netflix berlaku.Paket 3P (Internet + TV + Telepon) dan Paket 2P (Internet + TV) dengan akses Netflix yang sudah termasuk akses ke Disney+ Hotstar, Anda dapat mengakses Disney+ Hotstar tanpa biaya tambahan yang dapat diunduh melalui Google Play Store dan Apple App Store. Syarat dan ketentuan tambahan terkait Disney+ Hotstar berlaku. Paket IndiHome (Dengan Akses Netflix) sudah termasuk bonus streaming 50 GB. Paket IndiHome (Dengan Akses Netflix) sudah termasuk Paket Netflix Basic. Pelanggan dapat melakukan upgrade Paket Netflix dengan penambahan biaya sebesar Rp49.549 (Paket Netflix Standar) atau Rp109.009 (Paket Netflix Premium). Upgrade Paket Netflix dapat dilakukan melalui Aplikasi atau web Netflix dengan account yang sudah terhubung dengan IndiHome Kontrak berlangganan IndiHome berlaku selama minimal 12 (dua belas) bulan setelah layanan IndiHome berstatus aktif. Apabila pelanggan memutuskan untuk berhenti berlangganan sebelum masa berlaku kontrak berakhir, maka akan dikenakan denda sebesar Rp1.000.000. Tagihan IndiHome akan ditagihkan kepada pelanggan tiap bulan atas dasar pasca bayar, dan akan diprorata di bulan pertama. Pelanggan dilarang menjual kembali, baik sebagian atau seluruh layanan IndiHome dan dilarang mengalihkan, mengubah, atau menyalahgunakan setiap jaringan IndiHome dan layanan IndiHome. IndiHome menyediakan Hybrid Box (STB) dan ONT selama berlangganan.",
+      "Harga belum termasuk PPN 11%. Promo Biaya Pemasangan Baru (PSB)untuk kecepatan 30Mbps sebesar 90% menjadi Rp50.000,- dan untuk kecepatan 50Mbps dan 100Mbps mendapatkan promo Bebas Biaya Pemasangan Baru (PSB), dibayarkan setelah proses pemasangan perangkat layanan IndiHome selesai. Pelanggan tidak diperkenankan melakukan pembayaran secara tunai selain di GraPARI Telkomsel. Paket IndiHome (Dengan Akses Netflix) ini tersedia untuk pelanggan baru IndiHome yang ingin berlangganan mulai dari kecepatan 30 Mbps dan pelanggan lama IndiHome yang ingin melakukan upgrade ke paket ini. Masa berlangganan minimal Paket IndiHome (Dengan Akses Netflix) ini adalah 12 (dua belas) bulan. Paket 3P (Internet + TV + Telepon) dengan akses Netflix sudah termasuk paket TV Entry. Jumlah saluran dan konten TV Interaktif dapat berubah. Info channel bisa dilihat di indihome.co.id/tv/channel. Paket 2P (Internet + TV) dengan akses Netflix sudah termasuk paket TV Intro. Jumlah saluran dan konten TV Interaktif dapat berubah. Info channel bisa dilihat di indihome.co.id/tv/channel. Paket 3P (Internet + TV + Telepon) dan Paket 2P (Internet + TV) dengan akses Netflix sudah termasuk akses ke Netflix dan aplikasi IndiHome TV tanpa biaya tambahan yang dapat diunduh melalui Google Play Store dan Apple App Store. Syarat dan ketentuan tambahan terkait Netflix berlaku.Paket 3P (Internet + TV + Telepon) dan Paket 2P (Internet + TV) dengan akses Netflix yang sudah termasuk akses ke Disney+ Hotstar, Anda dapat mengakses Disney+ Hotstar tanpa biaya tambahan yang dapat diunduh melalui Google Play Store dan Apple App Store. Syarat dan ketentuan tambahan terkait Disney+ Hotstar berlaku. Paket IndiHome (Dengan Akses Netflix) sudah termasuk bonus streaming 50 GB. Paket IndiHome (Dengan Akses Netflix) sudah termasuk Paket Netflix Basic. Pelanggan dapat melakukan upgrade Paket Netflix dengan penambahan biaya sebesar Rp49.549 (Paket Netflix Standar) atau Rp109.009 (Paket Netflix Premium). Upgrade Paket Netflix dapat dilakukan melalui Aplikasi atau web Netflix dengan account yang sudah terhubung dengan IndiHome Kontrak berlangganan IndiHome berlaku selama minimal 12 (dua belas) bulan setelah layanan IndiHome berstatus aktif. Apabila pelanggan memutuskan untuk berhenti berlangganan sebelum masa berlaku kontrak berakhir, maka akan dikenakan denda sebesar Rp1.000.000. Tagihan IndiHome akan ditagihkan kepada pelanggan tiap bulan atas dasar pasca bayar, dan akan diprorata di bulan pertama. Pelanggan dilarang menjual kembali, baik sebagian atau seluruh layanan IndiHome dan dilarang mengalihkan, mengubah, atau menyalahgunakan setiap jaringan IndiHome dan layanan IndiHome. IndiHome menyediakan Hybrid Box (STB) dan ONT selama berlangganan.",
   },
 ];
 
