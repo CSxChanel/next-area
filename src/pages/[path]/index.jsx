@@ -37,7 +37,7 @@ export default function AreaPage({ area }) {
   return (
     <div>
       <Head>
-      <title>{[area.title]}</title>
+      <title>{area.title}</title>
         <meta name="description" content={area.des} />
         <link rel="canonical" href={pageUrl} />
 

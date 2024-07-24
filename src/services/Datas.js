@@ -19,49 +19,49 @@ export const Area = [
 {
     id: 102,
     path: "indihome-balaraja",
-    title: "IndiHome-Balaraja | 0812-10489840>",
+    title: "IndiHome-Balaraja>",
     des: "Registrasi IndiHome Balaraja Bisa langsung Melalui marketing resmi indihome. indihome Balaraja memberikan paket promo hanya di wilayah indihome Balaraja yang tidak semua wilayah tersedia paket promo Paling Murah."
 },
 {
     id: 103,
     path: "indihome-tigaraksa",
-    title: "IndiHome-Tigaraksa | 0812-10489840",
+    title: "IndiHome-Tigaraksa",
     des: "Untuk Sobat indihome wilayah Indihome-tigaraksa dapat Registrasi atau Pendaftaran Online juga bisa menghubungi Marketing resmi indihome. ada banyak pilihat paket promo untuk wilayah tigaraksa."
 },
 {
     id: 104,
     path: "indihome-rajeg",
-    title: "IndiHome-Rajeg | 0812-10489840",
+    title: "IndiHome-Rajeg",
     des: "IndiHome Rajeg hadir dengan kemudahan pendaftaran online untuk memenuhi kebutuhan internet Anda di rumah, kantor, atau tempat usaha. Tanpa perlu repot, Anda dapat langsung menghubungi marketing resmi IndiHome melalui gadget Anda. Segera daftar dan nikmati layanan internet terbaik dari IndiHome Rajeg."
 },
 {
     id: 105,
     path: "indihome-curug",
-    title: "IndiHome-Curug | 0812-10489840",
+    title: "IndiHome-Curug",
     des: "Untuk Anda yang berada di Curug, kini registrasi IndiHome semakin praktis dengan sistem online. Baik untuk kebutuhan rumah, kantor, atau usaha, Anda dapat mendaftar dengan mudah hanya dengan gadget Anda. Hubungi marketing resmi IndiHome dan segera daftar untuk menikmati internet cepat dan stabil."
 },
 {
     id: 106,
     path: "indihome-pasar-kemis",
-    title: "IndiHome-Pasarkemis | 0812-10489840",
+    title: "IndiHome-Pasarkemis",
     des: "Registrasi IndiHome Pasar Kemis kini semakin mudah dan cepat dengan sistem pendaftaran online. Hanya dengan menggunakan gadget, Anda bisa menghubungi marketing resmi IndiHome untuk pemasangan di rumah, kantor, atau tempat usaha Anda. Jangan lewatkan kesempatan ini, daftar IndiHome sekarang juga!"
 },
 {
     id: 107,
     path: "indihome-legok",
-    title: "IndiHome-Legok | 0812-10489840",
+    title: "IndiHome-Legok",
     des: "IndiHome Legok menawarkan kemudahan pendaftaran melalui sistem online, memudahkan Anda yang membutuhkan layanan internet di rumah, kantor, atau tempat usaha. Cukup gunakan gadget Anda untuk menghubungi marketing resmi IndiHome. Daftar sekarang dan nikmati layanan internet unggulan dari IndiHome Legok."
 },
 {
     id: 108,
     path: "indihome-kelapa-dua",
-    title: "IndiHome-Kelapadua | 0812-10489840",
+    title: "IndiHome-Kelapadua",
     des: "IndiHome Kelapa Dua kini menyediakan pendaftaran online yang mudah dan praktis untuk semua kebutuhan internet Anda, baik di rumah, kantor, maupun tempat usaha. Dengan gadget Anda, langsung hubungi marketing resmi IndiHome dan segera daftar untuk menikmati koneksi internet terbaik di Kelapa Dua."
 },
 {
   id: 109,
   path: "indihome-banten",
-  title: "IndiHome-Banten | 0812-10489840",
+  title: "IndiHome-Banten",
   des: "Untuk Sobat indihome wilayah Banten dapat melakukan Registrasi atau Pendaftaran Online, juga bisa menghubungi Marketing resmi indihome. ada banyak pilihat paket promo untuk wilayah IndiHome-Banten."
 }
 ];
