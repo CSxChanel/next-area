@@ -35,7 +35,6 @@ const Navbar = () => {
     );
   };
 
-
   const whatsappMessage = encodeURIComponent(
     'Halo, saya tertarik dengan paket IndiHome.'
   );
