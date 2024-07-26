@@ -7,7 +7,7 @@ const ProdukIndihome = () => {
   const { path } = router.query;
 
   const pageUrl = `https://next-area.vercel.app/${path}`;
-  const ogImage = `/images/image1.jpg`;
+  const ogImage = `https://next-area.vercel.app/image1.png`;
   
   return (
     <>

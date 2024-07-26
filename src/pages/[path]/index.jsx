@@ -25,7 +25,7 @@ export default function AreaPage({ area }) {
   }, []);
 
   const pageUrl = `https://next-area.vercel.app/${path}`;
-  const ogImage = `/images/image1.jpg`;
+  const ogImage = `https://next-area.vercel.app/image1.png`;
 
   if (!area) {
     return <div>Loading...</div>;
