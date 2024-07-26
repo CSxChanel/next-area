@@ -27,6 +27,7 @@ export default function Home() {
           content="Provider internet Pendaftaran indihome mencakup semua area. Biaya pemasangan Gratis."
         />
         <link rel="canonical" href={pageUrl} />
+        <meta property="og:image" content={ogImage} />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
