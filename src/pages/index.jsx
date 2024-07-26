@@ -13,9 +13,9 @@ import BannerImgSlider from "@/components/BannerImgSlider/BannerImgSlider";
 
 export default function Home() {
   const router = useRouter();
-  const { path } = router.query;
+  
 
-  const pageUrl = `https://next-area.vercel.app/${path}`;
+  const pageUrl = `https://next-area.vercel.app/`;
   const ogImage = `/images/image1.jpg`;
   
   return (
