@@ -1,13 +1,10 @@
 import InternetPromo from "@/components/ListHarga/InternetPromo";
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 const PromoIndihome = () => {
-  const router = useRouter();
-  const { path } = router.query;
-
-  const pageUrl = `https://next-area.vercel.app/${path}`;
-  const ogImage = `https://next-area.vercel.app/image1.png`;
+  
+  const pageUrl = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/promo-indihome`;
+  const ogImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/image1.png`;
   
   return (
     <>

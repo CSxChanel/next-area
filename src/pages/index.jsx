@@ -15,13 +15,13 @@ export default function Home() {
   const router = useRouter();
   
 
-  const pageUrl = `https://next-area.vercel.app/`;
-  const ogImage = `https://next-area.vercel.app/image1.png`;
+  const pageUrl = `${process.env.NEXT_PUBLIC_WEBSITE_URL}`
+  const ogImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/image1.png`;
   
   return (
     <>
       <Head>
-        <title>Indihome-Area |Provider internet Biaya Pemasangan gratis untuk semua Area</title>
+        <title>Indihome-Area | Provider internet Biaya Pemasangan gratis untuk semua Area</title>
         <meta
           name="description"
           content="Provider internet Pendaftaran indihome mencakup semua area. Biaya pemasangan Gratis."

@@ -1,13 +1,10 @@
 import InternetPromo from "@/components/ListHarga/InternetPromo";
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 const PromoIndihome = () => {
-  const router = useRouter();
-  const { path } = router.query;
-
-  const pageUrl = `https://www.yourdomain.com/${path}`;
-  const ogImage = `/images/image1.jpg`;
+  
+  const pageUrl = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/promo-indihome`;
+  const ogImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/image1.png`;
   
   return (
     <>

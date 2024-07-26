@@ -12,7 +12,8 @@ const Layout = ({ children }) => {
   const currentPath = router.asPath.replace("/", "");
 
   const currentArea = Area.find((area) => area.path === currentPath);
-
+  const pageUrl = `${process.env.NEXT_PUBLIC_WEBSITE_URL}`;
+  const ogImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/image1.png`;
   return (
     <div>
       {currentArea && (
@@ -21,15 +22,15 @@ const Layout = ({ children }) => {
           <meta name="description" content={currentArea.des} />
           <meta property="og:title" content={currentArea.title} />
           <meta property="og:description" content={currentArea.des} />
-          <meta property="og:image" content="/images/image1.jpg" />
+          <meta property="og:image" content={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/image1.png` }/>
           <meta
             property="og:url"
-            content={`https://next-area.vercel.app/${currentPath}`}
+            content={`${pageUrl}/${currentPath}`}
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={currentArea.title} />
           <meta name="twitter:description" content={currentArea.des} />
-          <meta name="twitter:image" content="/images/image1.jpg" />
+          <meta name="twitter:image" content={ogImage}/>
           {/* Robots meta tags */}
           <meta name="robots" content="index, follow" />
           <meta

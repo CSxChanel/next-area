@@ -24,8 +24,8 @@ export default function AreaPage({ area }) {
     return () => clearTimeout(timer);
   }, []);
 
-  const pageUrl = `https://next-area.vercel.app/${path}`;
-  const ogImage = `https://next-area.vercel.app/image1.png`;
+  const pageUrl = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/${path}`;
+  const ogImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/image1.png`;
 
   if (!area) {
     return <div>Loading...</div>;
