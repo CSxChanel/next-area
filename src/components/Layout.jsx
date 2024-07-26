@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
           <meta property="og:image" content="/images/image1.jpg" />
           <meta
             property="og:url"
-            content={`https://www.yourdomain.com/${currentPath}`}
+            content={`https://next-area.vercel.app/${currentPath}`}
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={currentArea.title} />
