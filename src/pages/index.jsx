@@ -16,7 +16,7 @@ export default function Home() {
   
 
   const pageUrl = `https://next-area.vercel.app/`;
-  const ogImage = `/images/image1.jpg`;
+  const ogImage = `/src/image1.png`;
   
   return (
     <>
