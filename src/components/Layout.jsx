@@ -19,10 +19,9 @@ const Layout = ({ children }) => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "IndiHome Internet Package",
+    name:"IndiHome Produk Package",
     image: ogImage,
-    description:
-        "Provider internet Pendaftaran indihome mencakup semua area. Biaya pemasangan Gratis.",
+    description:"Promo indihome Pemasangan Biaya gratis untuk semua Area",
     sku: "0446310786",
     mpn: "925872",
     brand: {

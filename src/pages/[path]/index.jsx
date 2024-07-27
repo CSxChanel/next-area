@@ -102,6 +102,7 @@ export default function AreaPage({ area }) {
               </>
             )}
           </div>
+          
           {!loading && (
             <div className="sm:grid sm:grid-cols-2 gap-3">
               {promo.map((pkg) => (
