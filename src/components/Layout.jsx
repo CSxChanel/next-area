@@ -14,6 +14,54 @@ const Layout = ({ children }) => {
   const currentArea = Area.find((area) => area.path === currentPath);
   const pageUrl = `${process.env.NEXT_PUBLIC_WEBSITE_URL}`;
   const ogImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/image1.png`;
+
+  //metadat schema produk
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "IndiHome Internet Package",
+    image: ogImage,
+    description:
+        "Provider internet Pendaftaran indihome mencakup semua area. Biaya pemasangan Gratis.",
+    sku: "0446310786",
+    mpn: "925872",
+    brand: {
+        "@type": "Brand",
+        name: "IndiHome"
+    },
+    review: {
+        "@type": "Review",
+        reviewRating: {
+            "@type": "Rating",
+            ratingValue: "4.5",
+            bestRating: "5"
+        },
+        author: {
+            "@type": "Person",
+            name: "Cecep Sudrajat"
+        }
+    },
+    aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.5",
+        reviewCount: "24"
+    },
+    offers: {
+        "@type": "Offer",
+        url: pageUrl,
+        priceCurrency: "IDR",
+        price: "220000",
+        priceValidUntil: "2024-12-31",
+        itemCondition: "https://schema.org/NewCondition",
+        availability: "https://schema.org/InStock",
+        seller: {
+            "@type": "Organization",
+            name: "IndiHome"
+        }
+    }
+};
+
+
   return (
     <div>
       {currentArea && (
@@ -37,6 +85,10 @@ const Layout = ({ children }) => {
             name="googlebot"
             content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
           />
+          {/* Structured Data */}
+          <script type="application/ld+json">
+                        {JSON.stringify(structuredData)}
+                    </script>
         </Head>
       )}
       <Navbar />
