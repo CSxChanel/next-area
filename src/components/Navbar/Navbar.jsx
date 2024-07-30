@@ -7,6 +7,8 @@ import { AiOutlineMenuUnfold, AiOutlineVerticalLeft } from "react-icons/ai";
 
 import { NavLinks } from "@/services/Nav-Link";
 import Logo from "/public/Logo_indiHome.png";
+import FormData from "@/components/Form/form-data";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +42,16 @@ const Navbar = () => {
   );
 
 
+  const [open, setOpen] = useState(false);
 
+  const handleOpen = () => {
+      setOpen(true);
+  };
+  const handleClose = () => {
+      setOpen(false);
+  };
+
+  
   return (
     <div>
       <div className="navbar fixed top-0 left-0 w-full p-4 flex justify-between items-center z-50 bg-slate-50 border-b-2 border-b-rose-400">
@@ -70,17 +81,17 @@ const Navbar = () => {
       >
         <div className="toggleNav flex flex-col items-center my-10 gap-y-10 text-xl font-semibold font-primary">
           <Nav />
-          <Link
-            href={`https://wa.me/+6281210489840?text=${whatsappMessage}`}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={handleOpen}
+            type="button"
             className="px-5  border rounded-2xl bg-rose-600 text-sm text-center text-slate-50 py-2 font-bold hover:bg-rose-700 hover:text-slate-100 animate-bounce"
           >
             Berlangganan Sekarang
-          </Link>
+          </button>
         </div>
         
       </div>
+      {open && <FormData onClose={handleClose} />}
     </div>
   );
 };

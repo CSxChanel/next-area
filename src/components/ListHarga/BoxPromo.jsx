@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { GoChevronDown } from "react-icons/go";
 import OpenBenevit from "@/components/Modals/OpenBenevit.jsx";
 import OpenSyarat from "@/components/Modals/OpenSyarat.jsx";
-import Link from "next/link";
+import FormPromo from "@/components/Form/form-promo";
 
 const BoxPromo = ({ type, title, price, mbps, benevit, benevit2, syarat }) => {
   const [isBenevitModalOpen, setIsBenevitModalOpen] = useState(false);
@@ -24,15 +24,17 @@ const BoxPromo = ({ type, title, price, mbps, benevit, benevit2, syarat }) => {
   const handleCloseSyaratModal = () => {
     setIsSyaratModalOpen(false);
   };
-  // Pesan yang akan dikirim melalui WhatsApp
-  const whatsappMessage = encodeURIComponent(
-    `Halo, saya tertarik dengan paket IndiHome \n
-┌〔 *Paling Murah* 〕
-├ Rp: *${price.toLocaleString()}*/bulan
-├ Mbps: *${mbps}* Mbps
-├ ${title}
-└──── ┈ ⳹`
-  );
+
+  const [open, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+
   return (
     <div className="my-8 sm:my-5 shadow-lg shadow-slate-500 w-full mx-auto bg-slate-100 rounded-xl">
       <h2 className="mx-auto w-[180px] py-1 text-center text-slate-100 font-bold bg-gradient-to-r from-rose-900 to-rose-600 rounded-bl-xl rounded-tr-xl">
@@ -55,13 +57,12 @@ const BoxPromo = ({ type, title, price, mbps, benevit, benevit2, syarat }) => {
           /bulan
         </h3>
         <div className="bg-rose-700 w-full rounded-xl shadow shadow-slate-500 text-slate-100 font-bold hover:scale-110 mt-5">
-          <Link
-            href={`https://wa.me/+6281210489840?text=${whatsappMessage}`}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={handleOpen}
+            typeof="button"
           >
             Berlangganan Sekarang
-          </Link>
+          </button>
         </div>
       </div>
       <div className="flex justify-between mx-3 border-t-2 my-7 py-2">
@@ -89,6 +90,7 @@ const BoxPromo = ({ type, title, price, mbps, benevit, benevit2, syarat }) => {
       {isSyaratModalOpen && (
         <OpenSyarat syarat={[syarat]} onClose={handleCloseSyaratModal} />
       )}
+      {open && <FormPromo price={price} mbps={mbps} title={title} onClose={handleClose} />}
     </div>
   );
 };

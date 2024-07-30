@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { GoChevronDown } from "react-icons/go";
 import OpenBenevit from "@/components/Modals/OpenBenevit.jsx";
 import OpenSyarat from "@/components/Modals/OpenSyarat.jsx";
-import Link from "next/link";
+import FormList from "@/components/Form/form-list";
 
 const BoxList = ({
   type,
@@ -36,15 +36,16 @@ const BoxList = ({
     setIsSyaratModalOpen(false);
   };
 
-  // Pesan yang akan dikirim melalui WhatsApp
-  const whatsappMessage = encodeURIComponent(
-    `Halo, saya tertarik dengan paket IndiHome \n
-  ┌〔 *Paling Murah* 〕
-  ├ Rp: *${price.toLocaleString()}*/bulan
-  ├ Mbps: *${mbps}* Mbps
-  ├ ${title}
-  └──── ┈ ⳹`
-  );
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+      setOpen(true);
+  };
+  const handleClose = () => {
+      setOpen(false);
+  };
+
+
 
   return (
     <div className="my-8 sm:my-5 shadow-lg shadow-slate-500 w-full mx-auto bg-slate-100 rounded-xl">
@@ -68,13 +69,12 @@ const BoxList = ({
           /bulan
         </h3>
         <div className="bg-rose-700 w-full rounded-xl shadow shadow-slate-500 text-slate-100 font-bold hover:scale-110 mt-5 py-1">
-          <Link
-            href={`https://wa.me/+6281210489840?text=${whatsappMessage}`}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+           onClick={handleOpen}
+           type="button"
           >
             Berlangganan Sekarang
-          </Link>
+          </button>
         </div>
       </div>
       <div className="flex justify-between mx-3 border-t-2 my-7 py-2">
@@ -102,6 +102,7 @@ const BoxList = ({
       {isSyaratModalOpen && (
         <OpenSyarat syarat={[syarat]} onClose={handleCloseSyaratModal} />
       )}
+      {open && <FormList price={price} title={title} mbps={mbps} onClose={handleClose} /> } 
     </div>
   );
 };
