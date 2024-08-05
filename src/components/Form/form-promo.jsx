@@ -5,6 +5,7 @@ const FormPromo = ({ onClose, price, mbps, title }) => {
     const [nama, setNama] = useState("");
     const [email, setEmail] = useState("");
     const [alamat, setAlamat] = useState("");
+    const [ktp, setKtp] = useState("")
     const [selectedProvinsi, setSelectedProvinsi] = useState("");
     const [selectedKabupaten, setSelectedKabupaten] = useState("");
     const [kabupatenKota, setKabupatenKota] = useState([]);
@@ -49,18 +50,19 @@ const FormPromo = ({ onClose, price, mbps, title }) => {
             kabupatenKota.find(k => k.id == selectedKabupaten)?.name || "";
 
         const whatsappMessage = encodeURIComponent(
-            `Halo, saya tertarik dengan paket IndiHome \n
+           `Halo, saya tertarik dengan paket IndiHome \n
             ┌〔 *Paling Murah* 〕
             ├ Nama : ${nama}
             ├ E-mail : ${email}
             ├ Alamat-pemasangan : ${alamat}
+            ├ Foto KTP : ${ktp}
             ├ Provinsi : ${provinsiName}
             ├ kab/Kota : ${kabupatenName}
             ├ Rp: *${price.toLocaleString()}*/bulan
             ├ Mbps: *${mbps}* Mbps
             ├ ${title}
             └──── ┈ ⳹`
-              );
+        );
 
         const waLink = `https://wa.me/6281210489840?text=${whatsappMessage}`;
         window.open(waLink, "_blank");
@@ -98,6 +100,17 @@ const FormPromo = ({ onClose, price, mbps, title }) => {
                          value={alamat}
                          onChange={(e) => setAlamat(e.target.value)}
                       />
+                      <div className="flex justify-between bg-transparent border-rose-500 border-b py-3 outline-none w-full font-semibold">
+                         <span>Upload Foto KTP</span>
+                         <input
+                            className="text:text-slate-950 focus:border-accent transition-all text-cyan-700 font-semibold"
+                            type="file"
+                            text="Upload foto KTP :"
+                            value={ktp}
+                            onChange={(e) => setKtp(e.target.value)}
+                         />
+                      </div>
+
                       <select className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-slate-950 focus:border-accent transition-all" value={selectedProvinsi} onChange={handleProvinsiChange}>
                          <option className="option" value="">
                             Pilih Provinsi :
