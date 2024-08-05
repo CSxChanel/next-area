@@ -1,56 +1,54 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const FormPromo = ({ onClose, price, mbps, title }) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const [nama, setNama] = useState("");
-    const [email, setEmail] = useState("");
-    const [alamat, setAlamat] = useState("");
-    const [ktp, setKtp] = useState("")
-    const [selectedProvinsi, setSelectedProvinsi] = useState("");
-    const [selectedKabupaten, setSelectedKabupaten] = useState("");
-    const [kabupatenKota, setKabupatenKota] = useState([]);
-    const modalRef = useRef(null);
+   const [isVisible, setIsVisible] = useState(false);
+   const [nama, setNama] = useState('');
+   const [email, setEmail] = useState('');
+   const [alamat, setAlamat] = useState('');
+   const [ktp, setKtp] = useState('');
+   const [selectedProvinsi, setSelectedProvinsi] = useState('');
+   const [selectedKabupaten, setSelectedKabupaten] = useState('');
+   const [kabupatenKota, setKabupatenKota] = useState([]);
+   const modalRef = useRef(null);
 
-    useEffect(() => {
-        setIsVisible(true);
+   const handleClose = useCallback(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+         onClose();
+      }, 300); // Durasi yang sama dengan transisi
+   }, [onClose]); // Pastikan onClose termasuk dalam array ketergantungan
 
-        // Close modal on outside click
-        const handleClickOutside = event => {
-            if (modalRef.current && !modalRef.current.contains(event.target)) {
-                handleClose();
-            }
-        };
+   useEffect(() => {
+      setIsVisible(true);
 
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, []);
+      // Close modal on outside click
+      const handleClickOutside = (event) => {
+         if (modalRef.current && !modalRef.current.contains(event.target)) {
+            handleClose();
+         }
+      };
 
-    const handleClose = () => {
-        setIsVisible(false);
-        setTimeout(() => {
-            onClose();
-        }, 300); // Durasi yang sama dengan transisi
-    };
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+         document.removeEventListener('mousedown', handleClickOutside);
+      };
+   }, [handleClose]);
 
-    // Handle Provinsi
-    const handleProvinsiChange = e => {
-        const selectedProvId = e.target.value;
-        setSelectedProvinsi(selectedProvId);
-        setKabupatenKota(data.kabupaten[selectedProvId] || []);
-        setSelectedKabupaten(""); // Reset kabupaten/kota saat provinsi berubah
-    };
+   // Handle Provinsi
+   const handleProvinsiChange = (e) => {
+      const selectedProvId = e.target.value;
+      setSelectedProvinsi(selectedProvId);
+      setKabupatenKota(data.kabupaten[selectedProvId] || []);
+      setSelectedKabupaten(''); // Reset kabupaten/kota saat provinsi berubah
+   };
 
-    // Handle Submit
-    const handleSubmit = () => {
-        const provinsiName =
-            data.provinsi.find(p => p.id == selectedProvinsi)?.name || "";
-        const kabupatenName =
-            kabupatenKota.find(k => k.id == selectedKabupaten)?.name || "";
+   // Handle Submit
+   const handleSubmit = () => {
+      const provinsiName = data.provinsi.find((p) => p.id == selectedProvinsi)?.name || '';
+      const kabupatenName = kabupatenKota.find((k) => k.id == selectedKabupaten)?.name || '';
 
-        const whatsappMessage = encodeURIComponent(
-           `Halo, saya tertarik dengan paket IndiHome \n
+      const whatsappMessage = encodeURIComponent(
+         `Halo, saya tertarik dengan paket IndiHome \n
             ┌〔 *Paling Murah* 〕
             ├ Nama : ${nama}
             ├ E-mail : ${email}
@@ -62,85 +60,85 @@ const FormPromo = ({ onClose, price, mbps, title }) => {
             ├ Mbps: *${mbps}* Mbps
             ├ ${title}
             └──── ┈ ⳹`
-        );
+      );
 
-        const waLink = `https://wa.me/6281210489840?text=${whatsappMessage}`;
-        window.open(waLink, "_blank");
-        handleClose(); // Close modal after submitting
-    };
+      const waLink = `https://wa.me/6281210489840?text=${whatsappMessage}`;
+      window.open(waLink, '_blank');
+      handleClose(); // Close modal after submitting
+   };
 
-    return (
-       <div className={`fixed z-20 inset-0 flex items-center justify-center left-5 right-5 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <div className={`fixed top-0 right-0 h-full w-full backdrop-blur ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}></div>
-          <div
-             ref={modalRef}
-             className={`bg-slate-200 bg-opacity-75 pt-4 border-2 border-rose-500 backdrop-blur rounded-lg overflow-hidden w-full max-w-4xl max-h-[70vh] transition-transform duration-300 ${isVisible ? 'scale-100' : 'scale-90'}`}
-          >
-             <div className="max-h-[50vh] overflow-y-scroll">
-                <div className="p-2">
-                   <form className="gap-y-6 pb-11 p-6 items-start" onSubmit={(e) => e.preventDefault()}>
-                      <input
-                         className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-slate-950 focus:border-accent transition-all text-cyan-700 font-semibold"
-                         type="text"
-                         placeholder="Nama :"
-                         value={nama}
-                         onChange={(e) => setNama(e.target.value)}
-                      />
-                      <input
-                         className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-slate-950 focus:border-accent transition-all text-cyan-700 font-semibold"
-                         type="email"
-                         placeholder="E-mail :"
-                         value={email}
-                         onChange={(e) => setEmail(e.target.value)}
-                      />
-                      <input
-                         className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-slate-950 focus:border-accent transition-all text-cyan-700 font-semibold"
-                         type="text"
-                         placeholder="Alamat pemasangan :"
-                         value={alamat}
-                         onChange={(e) => setAlamat(e.target.value)}
-                      />
-                    
-                      <select className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-slate-950 focus:border-accent transition-all" value={selectedProvinsi} onChange={handleProvinsiChange}>
-                         <option className="option" value="">
-                            Pilih Provinsi :
-                         </option>
-                         {data.provinsi.map((provinsi) => (
-                            <option key={provinsi.id} value={provinsi.id}>
-                               {provinsi.name}
-                            </option>
-                         ))}
-                      </select>
-                      <select
-                         className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-rose-500 focus:border-accent transition-all"
-                         value={selectedKabupaten}
-                         onChange={(e) => setSelectedKabupaten(e.target.value)}
-                      >
-                         <option value="">Pilih Kabupaten/Kota :</option>
-                         {kabupatenKota.map((kab) => (
-                            <option key={kab.id} value={kab.id}>
-                               {kab.name}
-                            </option>
-                         ))}
-                      </select>
-                   </form>
-                   <div className="text-center font-bold">
-                      <h3 className="mb-4">Paket yang dipilih ;</h3>
-                      <p>{title}</p>
-                      <p>{mbps}Mbps</p>
-                      <p>Harga : {price.toLocaleString()}/bulan</p>
-                   </div>
-                </div>
-             </div>
+   return (
+      <div className={`fixed z-20 inset-0 flex items-center justify-center left-5 right-5 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+         <div className={`fixed top-0 right-0 h-full w-full backdrop-blur ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}></div>
+         <div
+            ref={modalRef}
+            className={`bg-slate-200 bg-opacity-75 pt-4 border-2 border-rose-500 backdrop-blur rounded-lg overflow-hidden w-full max-w-4xl max-h-[70vh] transition-transform duration-300 ${isVisible ? 'scale-100' : 'scale-90'}`}
+         >
+            <div className="max-h-[50vh] overflow-y-scroll">
+               <div className="p-2">
+                  <form className="gap-y-6 pb-11 p-6 items-start" onSubmit={(e) => e.preventDefault()}>
+                     <input
+                        className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-slate-950 focus:border-accent transition-all text-cyan-700 font-semibold"
+                        type="text"
+                        placeholder="Nama :"
+                        value={nama}
+                        onChange={(e) => setNama(e.target.value)}
+                     />
+                     <input
+                        className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-slate-950 focus:border-accent transition-all text-cyan-700 font-semibold"
+                        type="email"
+                        placeholder="E-mail :"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                     />
+                     <input
+                        className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-slate-950 focus:border-accent transition-all text-cyan-700 font-semibold"
+                        type="text"
+                        placeholder="Alamat pemasangan :"
+                        value={alamat}
+                        onChange={(e) => setAlamat(e.target.value)}
+                     />
 
-             <div className="bg-slate-300 px-4 py-3">
-                <button onClick={handleSubmit} type="button" className="bg-rose-600 text-slate-100 font-bold border-2 justify-center w-full rounded-md px-4 py-2">
-                   Submit
-                </button>
-             </div>
-          </div>
-       </div>
-    );
+                     <select className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-slate-950 focus:border-accent transition-all" value={selectedProvinsi} onChange={handleProvinsiChange}>
+                        <option className="option" value="">
+                           Pilih Provinsi :
+                        </option>
+                        {data.provinsi.map((provinsi) => (
+                           <option key={provinsi.id} value={provinsi.id}>
+                              {provinsi.name}
+                           </option>
+                        ))}
+                     </select>
+                     <select
+                        className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-rose-500 focus:border-accent transition-all"
+                        value={selectedKabupaten}
+                        onChange={(e) => setSelectedKabupaten(e.target.value)}
+                     >
+                        <option value="">Pilih Kabupaten/Kota :</option>
+                        {kabupatenKota.map((kab) => (
+                           <option key={kab.id} value={kab.id}>
+                              {kab.name}
+                           </option>
+                        ))}
+                     </select>
+                  </form>
+                  <div className="text-center font-bold">
+                     <h3 className="mb-4">Paket yang dipilih ;</h3>
+                     <p>{title}</p>
+                     <p>{mbps}Mbps</p>
+                     <p>Harga : {price.toLocaleString()}/bulan</p>
+                  </div>
+               </div>
+            </div>
+
+            <div className="bg-slate-300 px-4 py-3">
+               <button onClick={handleSubmit} type="button" className="bg-rose-600 text-slate-100 font-bold border-2 justify-center w-full rounded-md px-4 py-2">
+                  Submit
+               </button>
+            </div>
+         </div>
+      </div>
+   );
 };
 
 export default FormPromo;
