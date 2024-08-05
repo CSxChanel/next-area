@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "react-lazy-load-image-component": "^1.6.2",
     "react-slick": "^0.30.2",
     "react-spinners": "^0.14.1",
+    "sharp": "^0.33.4",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
