@@ -58,7 +58,7 @@ const FormData = ({ onClose }) => {
                 `\nKabupaten/Kota : ${kabupatenName}`
         );
 
-        const waLink = `https://wa.me/6282213452856?text=${whatsappMessage}`;
+        const waLink = `https://wa.me/6281210489840?text=${whatsappMessage}`;
         window.open(waLink, "_blank");
         handleClose(); // Close modal after submitting
     };
