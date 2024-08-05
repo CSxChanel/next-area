@@ -100,17 +100,7 @@ const FormPromo = ({ onClose, price, mbps, title }) => {
                          value={alamat}
                          onChange={(e) => setAlamat(e.target.value)}
                       />
-                      <div className="flex justify-between bg-transparent border-rose-500 border-b py-3 outline-none w-full font-semibold">
-                         <span>Upload Foto KTP</span>
-                         <input
-                            className="text:text-slate-950 focus:border-accent transition-all text-cyan-700 font-semibold"
-                            type="file"
-                            text="Upload foto KTP :"
-                            value={ktp}
-                            onChange={(e) => setKtp(e.target.value)}
-                         />
-                      </div>
-
+                    
                       <select className="bg-transparent border-rose-500 border-b py-3 outline-none w-full placeholder:text-slate-950 focus:border-accent transition-all" value={selectedProvinsi} onChange={handleProvinsiChange}>
                          <option className="option" value="">
                             Pilih Provinsi :
