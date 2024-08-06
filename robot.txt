@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: /
-
-Sitemap: https://indihome-area.com/sitemap.xml
