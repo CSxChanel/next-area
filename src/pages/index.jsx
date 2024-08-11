@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
+
 //components
 import Banner from "@/components/Banner";
 import InternetJitu from "@/components/ListHarga/InternetOnly";
@@ -12,13 +12,19 @@ import BannerImgSlider from "@/components/BannerImgSlider/BannerImgSlider";
 
 
 export default function Home() {
-  const router = useRouter();
+  const area = 
+    {
+      path: "indihome-area",
+      title: "Indihome Area",
+      pageTitle: "Indihome-Area | Provider internet Biaya Pemasangan gratis untuk semua Area",
+      description: "Bebas akses internet stabil, telepon rumah jernih dan tayangan Tv interaktif terpopuler dengan indiHome. Miliki layanan internet terbaik di rumah sekarang juga.",
+      conten: "Solusi Internet Cepat, Berkelas, dan Cerdas untuk Aktifitas Tanpa Batas"
+    };
   
-
   const pageUrl = `${process.env.NEXT_PUBLIC_WEBSITE_URL}`
   const ogImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/image1.png`;
     //metadat schema produk
-    const structuredData = {
+  const structuredData = {
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Indihome Area | Produk indihome",
@@ -65,30 +71,30 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Indihome-Area | Provider internet Biaya Pemasangan gratis untuk semua Area</title>
+        <title>{area.pageTitle}</title>
         <meta
           name="description"
-          content="Provider internet Pendaftaran indihome mencakup semua area. Biaya pemasangan Gratis."
+          content={area.description}
         />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:image" content={ogImage} />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Indihome-Area || Provider internet Pendaftaran gratis" />
+        <meta property="og:title" content={area.pageTitle} />
         <meta
           property="og:description"
-          content="Promo internet indihome Pendaftaran biaya Gratis,Pemasangan indihome mencakup semua Area."
+          content={area.description}
         />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:image" content={ogImage} />
 
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Indihome-Area || Provider internet Pendaftaran Gratis" />
+        <meta name="twitter:title" content={area.pageTitle} />
         <meta
           name="twitter:description"
-          content="Promo internet indihome Pendaftaran biaya Gratis,Pemasangan indihome mencakup semua Area."
+          content={area.description}
         />
         <meta name="twitter:image" content={ogImage} />
         <meta name="keywords" content="indihome, internet, pendaftaran, indihome-cikupa, indihome-balaraja, indihome-tigaraksa" />
@@ -102,19 +108,18 @@ export default function Home() {
         <script type="application/ld+json">
                         {JSON.stringify(structuredData)}
                     </script>
-      </Head>
-      <div>
-        <Head>
-          <title>Indihome-Area | Provider internet Biaya Pemasangan gratis untuk semua Area</title>
-        </Head>
-        <Banner />
-        <InternetPromo />
+      </Head>  
+        <Banner 
+        title={area.title}
+        description={area.description} />
+        <InternetPromo 
+        title={area.title}
+        path={area.path} />
         <InternetJitu />
         <InternetTv />
         <InetTvPhone />
         <MapImage />
         <BannerImgSlider />
-      </div>
     </>
   );
 }

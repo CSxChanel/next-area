@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import BoxPromo from "@/components/ListHarga/BoxPromo.jsx";
 import { HargaPromo } from "@/services/Datas.js";
 import { PulseLoader } from "react-spinners";
+import Button from "../Button";
 
-const InternetPromo = () => {
+const InternetPromo = ({title, path, onClick, buttonLabel}) => {
   const promo = [...HargaPromo];
   const [loading, setLoading] = useState(true);
 
@@ -27,7 +28,7 @@ const InternetPromo = () => {
             <h1 className="font-bold text-2xl sm:text-3xl">
               Pilihan Paket IndiHome
             </h1>
-            <p className="font-semibold text-md sm:text-xl p-3 sm:px-8">IndiHome menawarkan berbagai paket promo menarik yang dirancang untuk memenuhi kebutuhan internet Anda dengan harga yang lebih terjangkau. Dengan paket-paket promo ini, Anda dapat menikmati layanan internet cepat, stabil, dan berkualitas tinggi dari IndiHome.</p>
+            <p className="font-semibold text-md sm:text-xl p-3 sm:px-8">{title} menawarkan berbagai paket promo menarik yang dirancang untuk memenuhi kebutuhan internet Anda dengan harga yang lebih terjangkau. Dengan paket-paket promo ini, Anda dapat menikmati layanan internet cepat, stabil, dan berkualitas tinggi dari {path}.</p>
             <div className="border-t-2 border-slate-300 my-8">
               <h1 className="font-bold text-2xl sm:text-3xl sm:mt-5 mt-3 text-rose-600">
                 Paket 1P (Internet Only)
@@ -53,6 +54,9 @@ const InternetPromo = () => {
           ))}
         </div>
       )}
+      <Button onClick={onClick}>
+        {buttonLabel}
+      </Button>
     </div>
   );
 };

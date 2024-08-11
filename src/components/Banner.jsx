@@ -1,24 +1,19 @@
 //src/comoponents/Banner
 
-const Banner = () => {
+const Banner = ({title, description}) => {
     return (
         <div className="rounded-br-[55px] rounded-tl-[55px] w-full bg-gradient-to-r from-red-700 to-rose-500">
             <div className="py-10 px-5 text-slate-100 sm:grid sm:grid-cols-2 sm:gap-x-12 sm:px-24 sm:items-start">
                 <div>
                     <h2 className="text-2xl font-bold mb-4">
-                        Selamat datang indiHome
+                        Selamat datang {title}
                     </h2>
                     <p>
-                        Bebas akses internet stabil, telepon rumah jernih dan
-                        tayangan Tv interaktif terpopuler dengan indiHome.
-                        Miliki layanan internet terbaik di rumah sekarang juga.
+                        {description}
                     </p>
                 </div>
                 <div>
-                    <h3 className="text-[27px] mt-8 leading-8 font-semibold">
-                        Solusi Internet Cepat, Berkelas, dan Cerdas untuk
-                        Aktifitas Tanpa Bata
-                    </h3>
+                    <h3 className="text-[27px] mt-8 leading-8 font-semibold">Solusi Internet Cepat, Berkelas, dan Cerdas untuk Aktifitas Tanpa Batas</h3>
                 </div>
             </div>
         </div>
