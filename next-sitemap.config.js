@@ -1,10 +1,10 @@
-const { userAgent } = require('next/server');
+const { userAgent } = require("next/server");
 
 /** @type {import("next-sitemap").IConfig} */
 module.exports = {
-   siteUrl: process.env.NEXT_PUBLIC_WEBSITE_URL,
-   generateRobotsTxt: true,
-   robotsTxtPotions: {
-      policies: [{ userAgent: '*', allow: '/' }],
-   },
+    siteUrl: "https://www.indihome-area.com",
+    generateRobotsTxt: true,
+    robotsTxtPotions: {
+        policies: [{ userAgent: "*", allow: "/" }]
+    }
 };
