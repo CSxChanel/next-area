@@ -8,7 +8,7 @@ const BannerImgSlider = () => {
 
   const images = [
     {
-      src: "/images/image1.jpg",
+      src: "/images/image1.png",
       alt: "Viu indihome Tv",
       text: "Tonton tayangan Asia favoritmu di Viu melalui IndiHome Tv sekarang. Registrasi Indihome melalui sales resmi kami.",
     },
