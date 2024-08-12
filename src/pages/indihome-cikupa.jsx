@@ -18,9 +18,9 @@ function Cikupa () {
                 router.push('/produk-indihome');}
         };
 
-    const pageUrl = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/${cikupa.path}`;
-    
-    const ogImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/${cikupa.path}/image1.png`;
+    const pageUrl = `https://www.indihome-area.com/${cikupa.path}`;
+
+    const ogImage = `https://www.indihome-area.com/${cikupa.path}/image1.png`;
 
       //metadat schema produk
     const structuredData = {

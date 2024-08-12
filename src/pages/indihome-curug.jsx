@@ -18,9 +18,9 @@ function Curug () {
             router.push('/produk-indihome');}
     }
 
-    const pageUrl = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/${curug.path}`;
-    
-    const ogImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/${curug.path}/image1.png`;
+    const pageUrl = `https://www.indihome-area.com/${curug.path}`;
+
+    const ogImage = `https://www.indihome-area.com/${curug.path}/image1.png`;
 
       //metadat schema produk
     const structuredData = {
