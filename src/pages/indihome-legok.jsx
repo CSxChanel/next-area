@@ -22,7 +22,7 @@ function Legok() {
 
     const pageUrl = `https://www.indihome-area.com/${legok.path}`;
 
-    const ogImage = `https://www.indihome-area.com/${legok.path}/image1.png`;
+    const ogImage = "https://www.indihome-area.com/image1.png";
     //metadat schema produk
     const structuredData = {
         "@context": "https://schema.org",

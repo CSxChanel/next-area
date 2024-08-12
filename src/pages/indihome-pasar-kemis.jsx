@@ -22,7 +22,7 @@ function PasarKemis() {
 
     const pageUrl = `https://www.indihome-area.com/${pasarkemis.path}`;
 
-    const ogImage = `https://www.indihome-area.com/${pasarkemis.path}/image1.png`;
+    const ogImage = "https://www.indihome-area.com/image1.png";
 
     //metadat schema produk
     const structuredData = {

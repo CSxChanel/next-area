@@ -22,7 +22,7 @@ function Tigaraksa() {
 
     const pageUrl = `https://www.indihome-area.com/${tigaraksa.path}`;
 
-    const ogImage = `https://www.indihome-area.com/${tigaraksa.path}/image1.png`;
+    const ogImage = "https://www.indihome-area.com/image1.png";
 
     //metadat schema produk
     const structuredData = {

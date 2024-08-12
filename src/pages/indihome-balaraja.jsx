@@ -22,7 +22,7 @@ function Balaraja() {
 
     const pageUrl = `https://www.indihome-area.com/${balaraja.path}`;
 
-    const ogImage = `https://www.indihome-area.com/${balaraja.path}/image1.png`;
+    const ogImage = "https://www.indihome-area.com/image1.png";
 
     //metadat schema produk
     const structuredData = {
