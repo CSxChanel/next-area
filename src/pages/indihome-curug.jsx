@@ -42,7 +42,7 @@ function Curug() {
             "@type": "Review",
             reviewRating: {
                 "@type": "Rating",
-                ratingValue: "4.5",
+                ratingValue: "5.0",
                 bestRating: "5"
             },
             author: {
@@ -52,8 +52,8 @@ function Curug() {
         },
         aggregateRating: {
             "@type": "AggregateRating",
-            ratingValue: "4.5",
-            reviewCount: "24"
+            ratingValue: "5.0",
+            reviewCount: "249.855"
         },
         offers: {
             "@type": "Offer",

@@ -10,7 +10,7 @@ function Tigaraksa() {
     const tigaraksa = {
         path: "indihome-tigaraksa",
         title: "IndiHome Tigaraksa",
-        pageTitle: "IndiHome - Tigaraksa | Pendaftaran Online",
+        pageTitle: "IndiHome - Tigaraksa | Pendaftaran Online area tigaraksa",
         description:
             "Untuk Sobat indihome wilayah Indihome-tigaraksa dapat Registrasi atau Pendaftaran Online juga bisa menghubungi Marketing resmi indihome. ada banyak pilihat paket promo untuk wilayah tigaraksa.",
         conten: "tigaraksa",
@@ -42,7 +42,7 @@ function Tigaraksa() {
             "@type": "Review",
             reviewRating: {
                 "@type": "Rating",
-                ratingValue: "4.5",
+                ratingValue: "5.0",
                 bestRating: "5"
             },
             author: {
@@ -52,8 +52,8 @@ function Tigaraksa() {
         },
         aggregateRating: {
             "@type": "AggregateRating",
-            ratingValue: "4.5",
-            reviewCount: "24"
+            ratingValue: "5.0",
+            reviewCount: "249.855"
         },
         offers: {
             "@type": "Offer",
