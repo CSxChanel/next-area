@@ -74,7 +74,7 @@ function CitraRaya() {
         <>
             <Head>
                 <title>{citraraya.pageTitle}</title>
-                <meta name="description" content={cikupa.description} />
+                <meta name="description" content={citraraya.description} />
                 <link rel="canonical" href={pageUrl} />
                 <meta property="og:image" content={ogImage} />
 
@@ -98,7 +98,7 @@ function CitraRaya() {
                 <meta name="twitter:image" content={ogImage} />
                 <meta
                     name="keywords"
-                    content="indihome, internet, pendaftaran, indihome-cikupa, indihome-banten, indihome-tigaraksa"
+                    content="indihome, internet, pendaftaran, indihome-citra-raya, indihome-banten, indihome-tigaraksa"
                 />
                 {/* Robots meta tags */}
                 <meta name="robots" content="index, follow" />
