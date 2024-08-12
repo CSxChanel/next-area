@@ -7,7 +7,7 @@ function Button ({ children, onClick }) {
     return (
         <div className="w-full mx-auto text-center my-12">
         <button
-            className="py-2 px-5 sm:px-10 cursor-pointer shadow-md font-semibold border border-rose-500 hover:border-rose-700 rounded-full text-rose-500 hover:text-rose-700"
+            className="py-2 px-5 sm:px-10 cursor-pointer shadow-md font-semibold border border-rose-700 hover:border-rose-800 rounded-full text-rose-700 hover:text-rose-800"
             onClick={onClick}
             >
             {children}
