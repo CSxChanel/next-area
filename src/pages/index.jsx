@@ -20,8 +20,8 @@ export default function Home() {
         conten: "Solusi Internet Cepat, Berkelas, dan Cerdas untuk Aktifitas Tanpa Batas"
     };
 
-    const pageUrl = "https://www.indihome-area.com";
-    const ogImage = "https://www.indihome-area.com/image1.png";
+    const pageUrl = "https://indihome-area.com";
+    const ogImage = "https://indihome-area.com/image1.png";
     //metadat schema produk
     const structuredData = {
         "@context": "https://schema.org",
@@ -46,12 +46,15 @@ export default function Home() {
             author: {
                 "@type": "Person",
                 name: "Cecep Sudrajat"
-            }
+            },
+            reviewBody:
+                "Layanan yang sangat memuaskan, kecepatan internet stabil dan dukungan pelanggan sangat responsif.",
+            datePublished: "2024-08-13"
         },
         aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "5.0",
-            reviewCount: "249.855"
+            reviewCount: "249855"
         },
         offers: {
             "@type": "Offer",

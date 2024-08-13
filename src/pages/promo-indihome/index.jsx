@@ -2,8 +2,12 @@ import InternetPromo from "@/components/ListHarga/InternetPromo";
 import Head from "next/head";
 
 const PromoIndihome = () => {
-    const pageUrl = "https://www.indihome-area.com/promo-indihome";
-    const ogImage = "https://www.indihome-area.com/image1.png";
+    const pageUrl = "https://indihome-area.com/promo-indihome";
+    const ogImage = "https://indihome-area.com/image1.png";
+    const promo = {
+        path: "promo-indihome",
+        title: "IndiHome"
+    };
 
     return (
         <>
@@ -81,7 +85,7 @@ const PromoIndihome = () => {
                 </div>
             </div>
 
-            <InternetPromo />
+            <InternetPromo path={promo.path} title={promo.title} />
         </>
     );
 };

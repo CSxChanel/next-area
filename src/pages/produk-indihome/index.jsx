@@ -2,8 +2,8 @@ import SemuaHarga from "@/components/ListHarga/SemuaHarga";
 import Head from "next/head";
 
 const ProdukIndihome = () => {
-    const pageUrl = "https://www.indihome-area.com/produk-indihome";
-    const ogImage = "https://www.indihome-area.com/image1.png";
+    const pageUrl = "https://indihome-area.com/produk-indihome";
+    const ogImage = "https://indihome-area.com/image1.png";
 
     return (
         <>

@@ -20,9 +20,9 @@ function CitraRaya() {
         }
     };
 
-    const pageUrl = `https://www.indihome-area.com/${citraraya.path}`;
+    const pageUrl = `https://indihome-area.com/${citraraya.path}`;
 
-    const ogImage = "https://www.indihome-area.com/image1.png";
+    const ogImage = "https://indihome-area.com/image1.png";
 
     //metadat schema produk
     const structuredData = {
@@ -48,12 +48,15 @@ function CitraRaya() {
             author: {
                 "@type": "Person",
                 name: "Cecep Sudrajat"
-            }
+            },
+            reviewBody:
+                "Layanan yang sangat memuaskan, kecepatan internet stabil dan dukungan pelanggan sangat responsif.",
+            datePublished: "2024-08-13"
         },
         aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "5.0",
-            reviewCount: "249.855"
+            reviewCount: "249855"
         },
         offers: {
             "@type": "Offer",

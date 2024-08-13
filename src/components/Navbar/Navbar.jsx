@@ -24,7 +24,7 @@ const Navbar = () => {
                         <Link
                             href={link.path}
                             target={link.target}
-                            className={`px-3 py-1 hover:border hover:text-slate-100 hover:bg-rose-600 hover:rounded-full
+                            className={`px-3 py-1 hover:border hover:text-slate-100 hover:bg-rose-700 hover:rounded-full
                             ${router.pathname === link.path ? "active" : ""}
                         `}
                         >
@@ -50,7 +50,7 @@ const Navbar = () => {
     };
 
     return (
-        <div>
+        <>
             <div className="navbar fixed top-0 left-0 w-full p-4 flex justify-between items-center z-50 bg-slate-50 border-b-2 border-b-rose-400">
                 <Link href="/">
                     <Image
@@ -93,7 +93,7 @@ const Navbar = () => {
                 </div>
             </div>
             {open && <FormData onClose={handleClose} />}
-        </div>
+        </>
     );
 };
 
