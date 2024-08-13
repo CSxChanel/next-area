@@ -3,7 +3,7 @@ import Head from "next/head";
 
 const PromoIndihome = () => {
     const pageUrl = "https://indihome-area.com/promo-indihome";
-    const ogImage = "https://indihome-area.com/image1.png";
+    const ogImage = "https://indihome-area.com/promo.png";
     const promo = {
         path: "promo-indihome",
         title: "IndiHome"

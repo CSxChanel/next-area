@@ -21,7 +21,7 @@ export default function Home() {
     };
 
     const pageUrl = "https://indihome-area.com";
-    const ogImage = "https://indihome-area.com/image1.png";
+    const ogImage = "https://indihome-area.com/paketMovie.png";
     //metadat schema produk
     const structuredData = {
         "@context": "https://schema.org",

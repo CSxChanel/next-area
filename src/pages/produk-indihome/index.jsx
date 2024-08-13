@@ -3,7 +3,7 @@ import Head from "next/head";
 
 const ProdukIndihome = () => {
     const pageUrl = "https://indihome-area.com/produk-indihome";
-    const ogImage = "https://indihome-area.com/image1.png";
+    const ogImage = "https://indihome-area.com/paketMovie.png";
 
     return (
         <>
