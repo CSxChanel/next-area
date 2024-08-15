@@ -1,7 +1,7 @@
 import AreaContainer from "@/components/indihomeArea/areaContainer";
 import { useRouter } from "next/router";
 
-const indihomeAreaList = () => {
+const IndihomeAreaList = () => {
   const router = useRouter();
   const indihomeArea = [
     {
@@ -97,7 +97,8 @@ const indihomeAreaList = () => {
     {
       image: "/image1.png",
       title: "Indihome Cikarang",
-      description: "registrasi untuk indihome area cikarang bisa langsung melalui marketing resmi indihome. indihome area cikarang memberikan paket promo hanya di wilayah indihome cikarang yang tidak semua wilayah tersedia paket promo Paling Murah.",
+      description:
+        "registrasi untuk indihome area cikarang bisa langsung melalui marketing resmi indihome. indihome area cikarang memberikan paket promo hanya di wilayah indihome cikarang yang tidak semua wilayah tersedia paket promo Paling Murah.",
       children: "View More",
       onClick: () => {
         router.push("/indihome-cikarang");
@@ -106,7 +107,8 @@ const indihomeAreaList = () => {
     {
       image: "/image1.png",
       title: "Indihome Kelapa Dua",
-      description: "IndiHome Kelapa Dua kini menyediakan pendaftaran online yang mudah dan praktis untuk semua kebutuhan internet Anda, baik di rumah, kantor, maupun tempat usaha. Dengan gadget Anda, langsung hubungi marketing resmi IndiHome dan segera daftar untuk menikmati koneksi internet terbaik di Kelapa Dua.",
+      description:
+        "IndiHome Kelapa Dua kini menyediakan pendaftaran online yang mudah dan praktis untuk semua kebutuhan internet Anda, baik di rumah, kantor, maupun tempat usaha. Dengan gadget Anda, langsung hubungi marketing resmi IndiHome dan segera daftar untuk menikmati koneksi internet terbaik di Kelapa Dua.",
       children: "View More",
       onClick: () => {
         router.push("/indihome-kelapa-dua");
@@ -115,7 +117,8 @@ const indihomeAreaList = () => {
     {
       image: "/image1.png",
       title: "Indihome Citra Raya",
-      description: "Registrasi IndiHome Citra Raya kini lebih mudah dengan sistem pendaftaran online. Anda bisa mendaftar dari rumah, kantor, atau tempat usaha hanya dengan menggunakan gadget. Hubungi marketing resmi IndiHome dan nikmati koneksi internet terbaik di Cikupa. Daftar sekarang dan rasakan kemudahannya!",
+      description:
+        "Registrasi IndiHome Citra Raya kini lebih mudah dengan sistem pendaftaran online. Anda bisa mendaftar dari rumah, kantor, atau tempat usaha hanya dengan menggunakan gadget. Hubungi marketing resmi IndiHome dan nikmati koneksi internet terbaik di Cikupa. Daftar sekarang dan rasakan kemudahannya!",
       children: "View More",
       onClick: () => {
         router.push("/indihome-citra-raya");
@@ -126,4 +129,4 @@ const indihomeAreaList = () => {
   return <AreaContainer indihomeArea={indihomeArea} />;
 };
 
-export default indihomeAreaList;
+export default IndihomeAreaList;
