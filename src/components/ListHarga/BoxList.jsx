@@ -77,7 +77,7 @@ const BoxList = ({
           </button>
         </div>
       </div>
-      <div className="flex justify-between mx-3 border-t-2 my-7 py-2">
+      <div className="flex justify-between mx-3 border-t-2 border-rose-700 my-7 py-2">
         <button
           onClick={handleOpenBenevitModal}
           className="text-rose-700 text-sm cursor-pointer font-medium"
