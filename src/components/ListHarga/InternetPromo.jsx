@@ -4,7 +4,7 @@ import { HargaPromo } from "@/services/Datas.js";
 import { PulseLoader } from "react-spinners";
 import Button from "../Button";
 
-const InternetPromo = ({title, path, onClick, buttonLabel}) => {
+const InternetPromo = ({ title, path, onClick, buttonLabel }) => {
   const promo = [...HargaPromo];
   const [loading, setLoading] = useState(true);
 
@@ -28,7 +28,13 @@ const InternetPromo = ({title, path, onClick, buttonLabel}) => {
             <h1 className="font-bold text-2xl sm:text-3xl">
               Pilihan Paket IndiHome
             </h1>
-            <p className="font-semibold text-md sm:text-xl p-3 sm:px-8">{title} menawarkan berbagai paket promo menarik yang dirancang untuk memenuhi kebutuhan internet Anda dengan harga yang lebih terjangkau. Dengan paket-paket promo ini, Anda dapat menikmati layanan internet cepat, stabil, dan berkualitas tinggi dari {path}.</p>
+            <p className="font-semibold text-md sm:text-xl p-3 sm:px-8">
+              {title} menawarkan berbagai paket promo menarik yang dirancang
+              untuk memenuhi kebutuhan internet Anda dengan harga yang lebih
+              terjangkau. Dengan paket-paket promo ini, Anda dapat menikmati
+              layanan internet cepat, stabil, dan berkualitas tinggi dari {path}
+              .
+            </p>
             <div className="border-t-2 border-slate-300 my-8">
               <h1 className="font-bold text-2xl sm:text-3xl sm:mt-5 mt-3 text-rose-600">
                 Paket 1P (Internet Only)
@@ -38,7 +44,7 @@ const InternetPromo = ({title, path, onClick, buttonLabel}) => {
         )}
       </div>
       {!loading && (
-        <div className="sm:grid sm:grid-cols-2 gap-3">
+        <div className="grid sm:grid-cols-3 gap-3">
           {promo.map((pkg) => (
             <BoxPromo
               key={pkg.id}
@@ -54,9 +60,7 @@ const InternetPromo = ({title, path, onClick, buttonLabel}) => {
           ))}
         </div>
       )}
-      <Button onClick={onClick}>
-        {buttonLabel}
-      </Button>
+      <Button onClick={onClick}>{buttonLabel}</Button>
     </div>
   );
 };

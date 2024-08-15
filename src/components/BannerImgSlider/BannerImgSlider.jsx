@@ -42,7 +42,6 @@ const BannerImgSlider = () => {
       alt: "Image 7",
       text: "IndiHome Prime Bayar satu bulan Nikmati Prime Vidio Tiga bulan. Buruan aktifkan paketnya.",
     },
-    // Tambahkan lebih banyak gambar sesuai kebutuhan
   ];
 
   return (
@@ -57,12 +56,12 @@ const BannerImgSlider = () => {
       />
       <div className="relative z-10 flex justify-end gap-x-5 items-center">
         <h1 className="p-4 text-xl">{images[currentIndex].text}</h1>
-        <div className="flex space-x-4 overflow-x-scroll px-5 py-2 bg-white bg-opacity-70 rounded-l-2xl shadow-md max-w-[40%]">
+        <div className="flex space-x-4 overflow-x-scroll px-5 py-2 bg-white bg-opacity-70 rounded-l-2xl shadow-md max-w-[60%]">
           {images.map((image, index) => (
             <div
               key={index}
-              className={`w-[220px] h-full flex-shrink-0 cursor-pointer ${
-                currentIndex === index ? "border-4 border-black" : ""
+              className={`w-[190px] h-full flex-shrink-0 cursor-pointer ${
+                currentIndex === index ? "border-2 border-black" : ""
               }`}
               onClick={() => setCurrentIndex(index)}
             >

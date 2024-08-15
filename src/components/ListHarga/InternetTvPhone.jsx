@@ -32,7 +32,7 @@ const InetTvPhone = () => {
                     <PulseLoader color="#e11d48" size={15} />
                 </div>
             ) : (
-                <div className="sm:grid sm:grid-cols-2 gap-3">
+                <div className="grid sm:grid-cols-3 gap-3">
                     {inetTvPhone.map(pkg => (
                         <BoxList
                             key={pkg.id}

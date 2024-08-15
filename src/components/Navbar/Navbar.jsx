@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
 import { useRouter } from "next/router";
 import { AiOutlineMenuUnfold, AiOutlineVerticalLeft } from "react-icons/ai";
-
 import { NavLinks } from "@/services/Nav-Link";
 import Logo from "/public/Logo_indiHome.png";
 import FormData from "@/components/Form/form-data";
@@ -15,23 +13,32 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const Nav = () => {
+  const Nav = ({ onLinkClick }) => {
     const router = useRouter();
+
     return (
       <>
-        {NavLinks.map((link) => (
-          <div key={link.id}>
-            <Link
-              href={link.path}
-              target={link.target}
-              className={`px-3 py-1 hover:border hover:text-slate-100 hover:bg-rose-700 hover:rounded-full
-                            ${router.pathname === link.path ? "text-rose-700 shadow-inherit" : ""}
+        {NavLinks.map((link) => {
+          // Mengecek apakah path aktif termasuk dalam URL
+          const isActive = router.pathname.startsWith(link.path);
+
+          return (
+            <div key={link.id}>
+              <Link
+                href={link.path}
+                target={link.target}
+                onClick={() => {
+                  if (onLinkClick) onLinkClick();
+                }}
+                className={`px-3 py-1 hover:border hover:text-slate-100 hover:bg-rose-700 hover:rounded-full
+                            ${isActive ? "text-rose-700 shadow-inherit" : ""}
                         `}
-            >
-              {link.text}
-            </Link>
-          </div>
-        ))}
+              >
+                {link.text}
+              </Link>
+            </div>
+          );
+        })}
       </>
     );
   };
@@ -73,12 +80,12 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`fixed top-20 right-0 h-full w-full bg-white/60  lg:hidden backdrop-blur ${
+        className={`fixed top-20 right-0 h-full w-full bg-white/60 lg:hidden backdrop-blur ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-500 ease-in-out z-40 overflow-y-scroll`}
       >
         <div className="toggleNav flex flex-col items-center my-10 gap-y-10 text-xl font-semibold font-primary">
-          <Nav />
+          <Nav onLinkClick={toggleMenu} />
           <button
             onClick={handleOpen}
             type="button"

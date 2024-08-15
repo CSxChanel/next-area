@@ -58,14 +58,14 @@ const BoxList = ({
           <p className="-mt-2">Mbps</p>
         </div>
         <div>
-          <h3 className="font-semibold text-xl">{title}</h3>
-          <p>{type}</p>
+          <h3 className="font-semibold text-xl sm:text-md">{title}</h3>
+          <p className="text-xl sm:text-sm">{type}</p>
         </div>
       </div>
       <div className="mx-7 text-center">
         <h3 className="font-semibold mt-8">
           Rp{" "}
-          <span className="text-2xl font-bold">{price.toLocaleString()}</span>
+          <span className="text-3xl font-bold">{price.toLocaleString()}</span>
           /bulan
         </h3>
         <div className="bg-rose-700 w-full rounded-xl shadow shadow-slate-500 text-slate-100 font-bold hover:scale-110 mt-5 py-1">

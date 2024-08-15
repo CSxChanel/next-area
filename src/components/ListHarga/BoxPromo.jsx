@@ -27,13 +27,12 @@ const BoxPromo = ({ type, title, price, mbps, benevit, benevit2, syarat }) => {
 
   const [open, setOpen] = useState(false);
 
-    const handleOpen = () => {
-        setOpen(true);
-    };
-    const handleClose = () => {
-        setOpen(false);
-    };
-
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="my-8 sm:my-5 shadow-lg shadow-slate-500 w-full mx-auto bg-slate-100 rounded-xl">
@@ -47,20 +46,17 @@ const BoxPromo = ({ type, title, price, mbps, benevit, benevit2, syarat }) => {
         </div>
         <div>
           <h3 className="font-semibold text-xl">{title}</h3>
-          <p>{type}</p>
+          <p className="text-xl">{type}</p>
         </div>
       </div>
       <div className="mx-7 text-center">
         <h3 className="font-semibold mt-8">
           Rp{" "}
-          <span className="text-2xl font-bold">{price.toLocaleString()}</span>
+          <span className="text-3xl font-bold">{price.toLocaleString()}</span>
           /bulan
         </h3>
         <div className="bg-rose-700 w-full rounded-xl shadow shadow-slate-500 text-slate-100 font-bold hover:scale-110 mt-5">
-          <button
-            onClick={handleOpen}
-            typeof="button"
-          >
+          <button onClick={handleOpen} typeof="button">
             Berlangganan Sekarang
           </button>
         </div>
@@ -90,7 +86,14 @@ const BoxPromo = ({ type, title, price, mbps, benevit, benevit2, syarat }) => {
       {isSyaratModalOpen && (
         <OpenSyarat syarat={[syarat]} onClose={handleCloseSyaratModal} />
       )}
-      {open && <FormPromo price={price} mbps={mbps} title={title} onClose={handleClose} />}
+      {open && (
+        <FormPromo
+          price={price}
+          mbps={mbps}
+          title={title}
+          onClose={handleClose}
+        />
+      )}
     </div>
   );
 };

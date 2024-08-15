@@ -37,7 +37,7 @@ const InternetJitu = () => {
                 )}
             </div>
             {!loading && (
-                <div className="sm:grid sm:grid-cols-2 gap-3">
+                <div className="grid sm:grid-cols-3 gap-3">
                     {internetOnly.map(pkg => (
                         <BoxList
                             key={pkg.id}

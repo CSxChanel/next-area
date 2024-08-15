@@ -34,7 +34,7 @@ const JituTv = () => {
                     <PulseLoader color="#e11d48" size={15} />
                 </div>
             ) : (
-                <div className="sm:grid sm:grid-cols-2 gap-3">
+                <div className="grid sm:grid-cols-3 gap-3">
                     {internetTv.map(pkg => (
                         <BoxList
                             key={pkg.id}
