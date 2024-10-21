@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node_version }}
+          node-version: 'v20'
 
       - run: npm install
       - run: npm install sharp
@@ -37,7 +37,7 @@ jobs:
     needs: build # Ini untuk memastikan job deploy hanya dijalankan setelah build sukses
     steps:
       - name: Download a Build Artifact
-        uses: actions/download-artifact@v4.1.8
+        uses: actions/download-artifact@v4
         with:
           name: build-output # Nama dari artifact yang di-upload sebelumnya
           path: ./build
