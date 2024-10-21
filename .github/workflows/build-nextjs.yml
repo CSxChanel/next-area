@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 'v20'
+          node-version: 'v20.x'
 
       - run: npm install
       - run: npm install sharp
