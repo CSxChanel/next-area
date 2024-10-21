@@ -29,7 +29,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-output
-          path: ./build
+          path: build
+          if-no-files-found: warn
+          overwrite: true
+          include-hidden-files: true
 
     
     
