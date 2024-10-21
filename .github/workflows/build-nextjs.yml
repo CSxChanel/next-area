@@ -19,16 +19,7 @@ jobs:
       - run: npm install sharp
       - run: npm run build
 
-      # Tambahkan langkah untuk commit dan push hasil build ke branch `gh-pages`
-      - name: Deploy to gh-pages
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git checkout --orphan gh-pages
-          git --work-tree .next add --all
-          git --work-tree .next commit -m 'Deploy Next.js build'
-          git push origin HEAD:gh-pages --force
-
+      
       # Jika kamu ingin menyimpan artifact sementara
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
