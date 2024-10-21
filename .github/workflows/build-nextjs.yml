@@ -22,4 +22,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: build-output
-        path: .next # Ini adalah folder hasil build Next.js
+        path: build # Ini adalah folder hasil build Next.js
