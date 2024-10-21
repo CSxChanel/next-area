@@ -1,16 +1,19 @@
 import Banner from "@/components/Banner";
 import BannerImgSlider from "@/components/BannerImgSlider/BannerImgSlider";
+import LanggananSekarang from "@/components/LanggananSekarang";
 import InternetPromo from "@/components/ListHarga/InternetPromo";
 import MapImage from "@/components/MapsImg/MapImage";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { PulseLoader } from "react-spinners";
 
 function Banten() {
     const router = useRouter();
     const banten = {
         path: "indihome-banten",
         title: "IndiHome Banten",
-        pageTitle: "IndiHome Banten | Indihome Area Banten",
+        pageTitle: "IndiHome Banten | Produk Indihome Area Banten",
         description:
             "Untuk Sobat indihome wilayah Banten dapat melakukan Registrasi atau Pendaftaran Online, juga bisa menghubungi Marketing resmi indihome. ada banyak pilihat paket promo untuk wilayah IndiHome-Banten.",
         conten: "banten",
@@ -139,51 +142,71 @@ function Banten() {
         }
     };
 
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    }, []);
+
     return (
-        <>
-            <Head>
-                <title>{banten.pageTitle}</title>
-                <meta name="description" content={banten.description} />
-                <link rel="canonical" href={pageUrl} />
-                <meta property="og:image" content={ogImage} />
+      <>
+        <Head>
+          <title>{banten.pageTitle}</title>
+          <meta name="description" content={banten.description} />
+          <link rel="canonical" href={pageUrl} />
+          <meta property="og:image" content={ogImage} />
 
-                {/* Open Graph Tags */}
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content={banten.pageTitle} />
-                <meta property="og:description" content={banten.description} />
-                <meta property="og:url" content={pageUrl} />
-                <meta property="og:image" content={ogImage} />
+          {/* Open Graph Tags */}
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content={banten.pageTitle} />
+          <meta property="og:description" content={banten.description} />
+          <meta property="og:url" content={pageUrl} />
+          <meta property="og:image" content={ogImage} />
 
-                {/* Twitter Cards */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={banten.pageTitle} />
-                <meta name="twitter:description" content={banten.description} />
-                <meta name="twitter:image" content={ogImage} />
-                <meta
-                    name="keywords"
-                    content="indihome, internet, pendaftaran, indihome-cikupa, indihome-banten, indihome-tigaraksa"
-                />
-                {/* Robots meta tags */}
-                <meta name="robots" content="index, follow" />
-                <meta
-                    name="googlebot"
-                    content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
-                />
-                {/* Structured Data */}
-                <script type="application/ld+json">
-                    {JSON.stringify(structuredData)}
-                </script>
-            </Head>
+          {/* Twitter Cards */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={banten.pageTitle} />
+          <meta name="twitter:description" content={banten.description} />
+          <meta name="twitter:image" content={ogImage} />
+          <meta
+            name="keywords"
+            content="indihome, internet, pendaftaran, indihome-cikupa, indihome-banten, indihome-tigaraksa"
+          />
+          {/* Robots meta tags */}
+          <meta name="robots" content="index, follow" />
+          <meta
+            name="googlebot"
+            content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+          />
+          {/* Structured Data */}
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        </Head>
+        {loading ? (
+          <div className="flex justify-center items-center h-64">
+            <PulseLoader color="#e11d48" size={15} />
+          </div>
+        ) : (
+          <>
             <Banner title={banten.title} description={banten.description} />
             <InternetPromo
-                title={banten.title}
-                path={banten.path}
-                onClick={banten.onClick}
-                buttonLabel={banten.buttonLabel}
+              title={banten.title}
+              path={banten.path}
+              onClick={banten.onClick}
+              buttonLabel={banten.buttonLabel}
             />
+
+            <LanggananSekarang title={banten.title} />
             <MapImage />
             <BannerImgSlider />
-        </>
+          </>
+        )}
+      </>
     );
 }
 export default Banten;
