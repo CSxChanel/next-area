@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: ${{ matrix.node_version }}
 
       - run: npm install
       - run: npm install sharp
@@ -26,7 +26,20 @@ jobs:
 
       # Upload the .next folder as artifact
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.1.8
         with:
           name: build-output
           path: ./.next
+
+          
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build # Ini untuk memastikan job deploy hanya dijalankan setelah build sukses
+    steps:
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: build-output # Nama dari artifact yang di-upload sebelumnya
+          path: ./build
+
+    
