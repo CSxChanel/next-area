@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 'v20.x'
+          node-version: 'v18'
 
       - run: npm install
       - run: npm install sharp
@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-output
-          path: build
+          path: .next
           if-no-files-found: warn
           overwrite: true
           include-hidden-files: true
