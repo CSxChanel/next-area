@@ -3,7 +3,7 @@ name: Build and Deploy Next.js Project
 on:
   push:
     branches:
-      - master  # Nama branch utama
+      - master
 
 jobs:
   build:
@@ -11,18 +11,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
+
       - run: npm install
       - run: npm install sharp
       - run: npm run build
 
-      
-      # Jika kamu ingin menyimpan artifact sementara
+      - name: Ensure .next folder exists
+        run: ls -la .next
+
+      # Upload the .next folder as artifact
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build-output
-          path: .next
+          path: ./.next
