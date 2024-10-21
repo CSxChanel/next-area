@@ -14,7 +14,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
+        node-version: '20'
     - run: npm install
     - run: npm install sharp
     - run: npm run build
@@ -22,4 +22,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: build-output
-        path: build # Ini adalah folder hasil build Next.js
+        path: .next # Ini adalah folder hasil build Next.js
