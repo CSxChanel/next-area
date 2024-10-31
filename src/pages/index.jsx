@@ -11,6 +11,9 @@ import BannerImgSlider from "@/components/BannerImgSlider/BannerImgSlider";
 import { PulseLoader } from "react-spinners";
 import { useEffect, useState } from "react";
 import LanggananSekarang from "@/components/LanggananSekarang";
+import LayananContainer from "@/components/LayananContainer";
+import BantuanIndihome from "@/components/BantuanIndihome";
+import Qne from "@/components/Qne";
 
 export default function Home() {
   const area = {
@@ -201,6 +204,9 @@ export default function Home() {
           <LanggananSekarang title={area.title} />
           <MapImage />
           <BannerImgSlider />
+          <LayananContainer />
+          <BantuanIndihome title={area.title} />
+          <Qne title={area.title} titleLink={area.path} />
         </>
       )}
     </>

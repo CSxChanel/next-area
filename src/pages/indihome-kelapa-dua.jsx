@@ -7,6 +7,8 @@ import Head from "next/head";
 import LanggananSekarang from "@/components/LanggananSekarang";
 import { PulseLoader } from "react-spinners";
 import { useEffect, useState } from "react";
+import BantuanIndihome from "@/components/BantuanIndihome";
+import Qne from "@/components/Qne";
 
 function KelapaDua() {
   const router = useRouter();
@@ -205,6 +207,11 @@ function KelapaDua() {
           <LanggananSekarang title={kelapadua.title} />
           <MapImage />
           <BannerImgSlider />
+          <BantuanIndihome title={kelapadua.title} />
+          <Qne
+            title={kelapadua.title}
+            titleLink="https://indihome-area.com/indihome-kelapa-dua"
+          />
         </>
       )}
     </>

@@ -1,8 +1,10 @@
 import Banner from "@/components/Banner";
 import BannerImgSlider from "@/components/BannerImgSlider/BannerImgSlider";
+import BantuanIndihome from "@/components/BantuanIndihome";
 import LanggananSekarang from "@/components/LanggananSekarang";
 import InternetPromo from "@/components/ListHarga/InternetPromo";
 import MapImage from "@/components/MapsImg/MapImage";
+import Qne from "@/components/Qne";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -205,6 +207,11 @@ function CitraRaya() {
           <LanggananSekarang title={citraraya.title} />
           <MapImage />
           <BannerImgSlider />
+          <BantuanIndihome
+            title={citraraya.title}
+            link="https://indihome-area.com/indihome-citra-raya"
+          />
+          <Qne title={citraraya.title} />
         </>
       )}
     </>

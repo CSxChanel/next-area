@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SlArrowRightCircle } from "react-icons/sl";
+import { MdAddTask } from "react-icons/md";
 const LanggananSekarang = ({ title }) => {
   // Handle Submit
   const whatsappMessage = encodeURIComponent(
@@ -27,7 +28,7 @@ const LanggananSekarang = ({ title }) => {
         <div className="bg-gradient-to-r from-red-700 to-rose-500 w-full mx-auto sm:grid sm:grid-cols-2 sm:gap-x-12 sm:items-center sm:justify-items-center py-4 px-5 text-slate-100">
           <h5 className="text-2xl sm:text-3xl font-bold">
             Yuk, Mulai Langganan <br />
-            IndiHome Sekarang!
+            {title} Sekarang!
           </h5>
 
           <button
@@ -58,6 +59,24 @@ const LanggananSekarang = ({ title }) => {
           terjangkau seperti {title}. Langganan IndiHome Sekarang dan nikmati
           pengalaman digital terbaik di rumah Anda.
         </p>
+        <div className="gap-y-5 text-xl text-rose-600">
+          <p className="flex gap-x-4 items-center">
+            <MdAddTask />
+            Kuota tanpa batas
+          </p>
+          <p className="flex gap-x-4 items-center">
+            <MdAddTask />
+            Bebas atur langganan sesuai anggaran
+          </p>
+          <p className="flex gap-x-4 items-center">
+            <MdAddTask />
+            Bebas biaya langganan beragam aplikasi
+          </p>
+          <p className="flex gap-x-4 items-center">
+            <MdAddTask />
+            Layanan pelanggan 24/jam
+          </p>
+        </div>
       </section>
     </>
   );
